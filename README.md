@@ -2,5 +2,6 @@
 
 > ficheiros de partida do projeto:
     
-index.html com titulo e metadados;
-ligação a dependências (**bootstrap**, **jquery** e **three.js**);
+<p>index.html com titulo e metadados;</p>
+<p>ligação a font oficial do projeto (**IBM-Plex-Sans**);</p>
+<p>ligação a dependências (**bootstrap**, **jquery** e **three.js**);</p>
