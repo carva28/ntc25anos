@@ -400,9 +400,9 @@
 						objLoader.setModelName( modelName );
 						objLoader.setMaterials( materials );
 						objLoader.setLogging( true, true );
-						objLoader.load( 'models/male02.obj', callbackOnLoad, null, null, null, false );
+						objLoader.load( 'models/cat.obj', callbackOnLoad, null, null, null, false );
 					};
-					objLoader.loadMtl( 'models/male02.mtl', null, onLoadMtl );
+					objLoader.loadMtl( 'models/cat.mtl', null, onLoadMtl );
 				};
 				OBJLoader2Example.prototype._reportProgress = function( event ) {
 					var output = Validator.verifyInput( event.detail.text, '' );
