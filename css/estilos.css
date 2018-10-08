@@ -37,43 +37,5 @@ h1{
 }
 
 .box-shadow{
-    box-shadow:0 0 1rem 0.2rem rgba(0,0,0,.3) }
-
-
-/*
-#home figure > img{
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      max-width: 80%;
-      height: auto;
-}
-
-figure a{
-    display:inline-block;
-    width:100%;
-    text-align:center;
-}
-
-nav{
-  background-color:white;  
-  display:flex;
-  justify-content:space-around;
-  flex-wrap:Wrap;
-}
-
-nav a{
-    padding:.75rem 0;
-  padding-top:1rem;
-  color:white;
-  font-size:1.15rem;
-  text-decoration:none;
-  color:var(--main-green);
-  margin:0 2rem;
-}
-
-a.active{
-    border-bottom:.25rem solid var(--main-green);
-}
-*/
+    box-shadow:0 0 1rem 0.2rem rgba(0,0,0,.3);
+ }
