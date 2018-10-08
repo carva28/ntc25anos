@@ -1,3 +1,5 @@
 /* estilos gerais */
 
-/* adicionar IBM PLEX */
+html{
+    font-family: 'IBM Plex Mono', sans-serif;
+}
