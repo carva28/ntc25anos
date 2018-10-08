@@ -13,3 +13,7 @@ body{
 h1{
     color:var(--main-green);
 }
+
+#home{
+    min-height: 99vh;
+}
