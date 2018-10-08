@@ -1,3 +1,95 @@
 /* estilos gerais */
 
 /* adicionar IBM PLEX */
+html{
+    font-family:'IBM Plex Sans', sans-serif;
+    --main-green:#247b48;
+
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body > section {
+    min-height: 100vh;
+    padding:6rem 2rem;
+}
+
+h1{
+    color:var(--main-green);
+}
+
+figure a{
+    display:inline-block;
+    width:100%;
+    text-align:center;
+}
+
+
+nav{
+  background-color:white;  
+  display:flex;
+  justify-content:space-around;
+  flex-wrap:Wrap;
+}
+
+nav a{
+    padding:.75rem 0;
+  padding-top:1rem;
+  color:white;
+  font-size:1.15rem;
+  text-decoration:none;
+  color:var(--main-green);
+  margin:0 2rem;
+}
+
+a.active{
+    border-bottom:.25rem solid var(--main-green);
+}
+
+.shadow{
+  box-shadow: 0 2px 4px rgba(0,0,0,.5);
+}
+
+body > section{
+  min-height:100vh;
+  background-color:white;
+}
+
+#home{
+  display:flex;
+  background-color:var(--main-green);
+}
+
+#home figure{
+    background-color:white;
+    margin:auto;
+     width:90%;
+  height:90vh;
+   box-shadow: 0 0 5px rgba(0,0,0,.5);
+    padding:2rem;
+    position:relative;
+         // min-width:300px;
+          
+}
+
+
+figure a img{
+    max-width: 15%;
+    margin: auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,25%);
+}
+
+#home figure > img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    height: auto;
+
+}
