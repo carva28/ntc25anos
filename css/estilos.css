@@ -1,5 +1,15 @@
 /* estilos gerais */
 
 html{
+    /* variável para definir o verde 'oficial' */
+    --main-green:#159e43;
+}
+
+body{
     font-family: 'IBM Plex Mono', sans-serif;
+}
+
+/* exemplo de utilizacao da variavel */
+h1{
+    color:var(--main-green);
 }
