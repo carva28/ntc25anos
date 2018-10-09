@@ -12,12 +12,17 @@ body{
     overflow: hidden;
     background-color: var(--main-green);
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #home{
-    margin: auto;
     width: 90%;
     padding: 1rem;
+    padding-right: 0;
+    
+    position: relative;
+    z-index:10;
 }
 
 #home figure{
@@ -41,11 +46,59 @@ body{
     padding-top:2rem;
 }
 
+#social-media{
+    font-size:4vmin;
+    align-self: start;
+    padding-top:calc(10vh - .5rem);
+    position: relative;
+    z-index: 1;
+}
+
+#social-media a{
+    display:block;
+    padding: 1rem;
+    color:green;
+    background-color:white;
+    margin-bottom:.75rem;
+}
+
+#social-media a:hover{
+    background-color:transparent;
+}
+
+#social-media a:hover i{
+    color:white;
+}
+
+#social-media a:active{
+    box-shadow:0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);   
+}
+
 .box-shadow{
     box-shadow:0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
  }
 
  @media screen and (max-width:600px){
+     
+    body{
+        flex-wrap:wrap;
+    }
+
+    #home{
+        flex-basis:95%;
+        padding-right:1rem;
+        padding-bottom:0;
+    }
+
+    #social-media{
+        padding-top:0;
+    }
+
+    #social-media a{
+        display:inline-block;
+        align-self: flex-end;
+    }
+
      #home figure{
          padding:4rem 1.5rem;
      }
