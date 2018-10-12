@@ -9,7 +9,7 @@
 				font-family: Monospace;
 				color: #fff;
 				margin: 0px;
-				overflow: hidden;
+				overflow: auto;
 			}
 			#info {
 				color: #fff;
@@ -20,19 +20,65 @@
 				z-index: 100;
 				display:block;
 			}
+            
+            h2{
+                font-family: Lato;
+                font-size: 30px;
+                color: green;
+                text-align: center;
+            }
+            
 			#info a {
 				color: #75ddc1;
 				font-weight: bold;
 			}
+            
+            #btn_next01{
+                margin-top: 20px;
+                position: absolute;
+                margin-left: 300px;
+                background-color: green;
+                color: white;
+                padding: 20px 50px;
+                border: 3px solid grey ;
+                border-radius:  30px;
+            }
+            
+            #btn_next02{
+                position: absolute;
+                margin-left: -36%;
+                background-color: green;
+                color: white;
+                padding: 20px 50px;
+                border: 3px solid grey ;
+                border-radius:  30px;
+            }
+            
+            #container{
+                /*margin-top: 200px;*/
+                width: 50%;
+                height: 400px;
+                /*background-color: aqua;*/
+            }
+            
+            canvas{
+                width: 20%;
+                height: 10px;
+                /*background-color: yellow;*/
+            }
 		</style>
 	</head>
 
 	<body>
+        	<h2 id="ano_text">1995</h2><br />
 		<div id="info">
-			<a href="http://threejs.org" target="_blank" rel="noopener">1995</a> <br />
-			<a href="" target="_blank" rel="noopener">NEXT</a> <br />
-			<h2>1995</h2><br />
+			
+			<button id ="btn_next01" href="" target="_blank" rel="noopener">NEXT</button> <br>
+			<button id ="btn_next02" href="" target="_blank" rel="noopener">BACK</button> <br />
+		
 		</div>
+        
+        <div id="container"></div>
 
 		<script src="three/three.js"></script>
 
@@ -52,14 +98,16 @@
 			var container, stats, controls;
 			var camera, scene, renderer, light;
           
+        
 			init();
 			animate();
         
             
             
 			function init() {
-				container = document.createElement( 'div' );
-				document.body.appendChild( container );
+				//container = document.createElement( 'div' );
+				//document.body.appendChild( container );
+                container = document.getElementById('container');
 				camera = new THREE.PerspectiveCamera( 0.5, window.innerWidth / window.innerHeight, 0.25, 1000 );
 				//camera.position.set( -1.8, 0.9, 2.7 );
                 camera.position.x = 0;
@@ -75,14 +123,26 @@
                 
                 //controls.autoRotate = true;
 				controls.update();
+ 
+                
                 
 				scene = new THREE.Scene();
 				light = new THREE.HemisphereLight( 0xbbbbff, 0x444422 );
 				light.position.set( 1, 1, 0 );
 				scene.add( light );
 				// model
-				var loader = new THREE.GLTFLoader();
-				loader.load( 'models/19955.glb', function ( gltf ) {
+				
+                
+               
+                document.getElementById('btn_next01').onclick = function() {
+                    
+                    scene.remove(mesh); 
+                    
+                       //alert("button was clicked");
+                        document.getElementById('ano_text').innerHTML="1995";
+                    
+                    var loader = new THREE.GLTFLoader();
+                    loader.load( 'models/19955.glb' , function ( gltf ) {
 					gltf.scene.traverse( function ( child ) {
 						if ( child.isMesh ) {
                             
@@ -106,6 +166,75 @@
 				}, undefined, function ( e ) {
 					console.error( e );
 				} );
+                        
+                };
+                
+                
+                document.getElementById('btn_next02').onclick = function() {
+                        scene.remove(mesh); 
+                        
+                         document.getElementById('ano_text').innerHTML="1993";
+                        //alert("button was clicked 02");
+                        var loader = new THREE.GLTFLoader();
+                        loader.load( 'models/1993.glb' , function ( gltf ) {
+					gltf.scene.traverse( function ( child ) {
+						if ( child.isMesh ) {
+                            
+                            
+						}
+					} );
+                    
+                    gltf.scene.rotation.set(Math.PI * 0.5, 0, 0)
+					scene.add( gltf.scene );
+                    
+                                    console.log("nome:",gltf.scene );
+                      mesh = gltf.scene;
+                      scene.add(mesh);
+
+
+                    
+                    mesh.rotation.y += 0.006;
+                    
+                    render();
+
+				}, undefined, function ( e ) {
+					console.error( e );
+				} );
+                    
+                };
+                
+                
+                //MODEL INITIAL
+                
+                var loader = new THREE.GLTFLoader();
+                loader.load( 'models/19955.glb' , function ( gltf ) {
+					gltf.scene.traverse( function ( child ) {
+						if ( child.isMesh ) {
+                            
+                            
+						}
+					} );
+                    
+                    gltf.scene.rotation.set(Math.PI * 0.5, 0, 0)
+					scene.add( gltf.scene );
+                    
+                                    console.log("nome:",gltf.scene );
+                      mesh = gltf.scene;
+                      scene.add(mesh);
+
+
+                    
+                    mesh.rotation.y += 0.006;
+                    
+                    render();
+
+				}, undefined, function ( e ) {
+					console.error( e );
+				} );
+                    
+               
+                
+				
 
 				renderer = new THREE.WebGLRenderer( { alpha: true } );
                                 renderer.setClearColor( 0x000000, 0 );
@@ -137,7 +266,7 @@
                 
                 
             function render(){
-                    
+                
 
                 if (mesh) {
                     mesh.rotation.z -= 0.01;
@@ -148,6 +277,7 @@
             }
              
 		</script>
-
+            
+        <a>TESTE</a>
 	</body>
 </html>
