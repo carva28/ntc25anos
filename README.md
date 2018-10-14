@@ -2,4 +2,4 @@
 
 #### Carroussel effect with 3d models
 
-+ Animação com elesmentos 3d ✅
++ Animação com elementos 3d ✅
