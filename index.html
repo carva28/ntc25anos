@@ -49,15 +49,16 @@
 
 </head>
 
-<body>
+<!-- faz referencia à nav-->
+<body data-spy="scroll" data-target="#espiar" data-offset="10">
 
     <header>
         <section id="home">
             <figure class="box-shadow">
                 <img src="img/logo_web_v2.png" alt='Logotipo de celebração dos 25 ANOS do curso de Novas Tecnologias da Comunicação'>
-                <figcaption style="text-align: center">
-                    <a href="#sobre" style="color:green !important; font-size:10vmin">
-                        <i class="fas fa-arrow-down"></i>
+                <figcaption>
+                    <a href="#sobre">
+                        <i class="fas fa-angle-down"></i>
                     </a>
                 </figcaption>
             </figure>
@@ -79,11 +80,11 @@
             <img src="img/burger-menu.png" class="navbar-toggler-icon">
         </button>
 
-        <section class="collapse navbar-collapse" id="navbarSupportedContent">
-            <a class="active" href="#sobre">NTC</a>
-            <a href="#cronologia">Cronologia</a>
-            <a href="#testemunhos">Testemunhos</a>
-            <a href="#equipa">Equipa</a>
+        <section id="espiar" class="collapse navbar-collapse" >
+            <a class="nav-link"  href="#sobre">NTC</a>
+            <a class="nav-link"  href="#cronologia">Cronologia</a>
+            <a class="nav-link"  href="#testemunhos">Testemunhos</a>
+            <a class="nav-link"  href="#equipa">Equipa</a>
         </section>
     </nav>
 
