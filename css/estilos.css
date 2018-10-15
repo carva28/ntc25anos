@@ -4,14 +4,23 @@
 html{
     /* variável para definir o verde 'oficial' */
     --main-green:#159e43;
+
     /*-----------------SMOOTH SCROLL---------------*/
     scroll-behavior: smooth;
 }
 
 body{
     font-family: 'IBM Plex Sans', sans-serif;
-        /*---------------------PARA O SCROLL SPY--------------*/
-        position: relative;
+
+    /*---------------------PARA O SCROLL SPY--------------*/
+    position: relative;
+}
+
+body > section {
+    min-height: 100vh;
+    padding:6rem 2rem;
+    background-color:white;
+    position: relative;
 }
 
 /* exemplo de utilizacao da variavel */
@@ -38,15 +47,6 @@ header{
     align-items: center;
     justify-content: center;
 }
-
-
-body > section {
-    min-height: 100vh;
-    padding:6rem 2rem;
-    background-color:white;
-    position: relative;
-}
-
 
 #home{
     width: 90%;
@@ -81,6 +81,7 @@ body > section {
     left:50%;
     transform: translate(-50%,-10%);
 }
+
 figcaption a{
     color:inherit;
 }
@@ -177,6 +178,8 @@ nav a.active:before{
 /* ############################################################ * /
 
 /**/
+
+
 
 #apoios{
     margin-bottom: 3rem;
