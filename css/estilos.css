@@ -1,4 +1,5 @@
-/* estilos gerais */
+/* ######################################################################## * /
+/* ######  estilos gerais   ############################################### */
 
 html{
     /* variável para definir o verde 'oficial' */
@@ -14,6 +15,25 @@ h1{
     color:var(--main-green);
 }
 
+.box-shadow{
+    box-shadow:0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+ }
+
+/* ######  estilos gerais   ############################################### */
+/* ######################################################################## * /
+
+/* ######################################################################## * /
+/* ######  HOME   ############################################### */
+
+header{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--main-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 body > section {
     min-height: 100vh;
@@ -24,52 +44,81 @@ body > section {
 
 
 #home{
-    display:flex;
-    background-color:var(--main-green);
+    width: 90%;
+    padding: 1rem;
+    padding-right: 0;
+    position: relative;
+    z-index:10;
 }
   
 #home figure{
     background-color:white;
-    margin:auto;
-    width:90%;
-    height:90vh;
-    padding:2rem;
-    position:relative;        
+    padding:4rem 5rem;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
   }
   
   
-figure a img{
-      max-width: 15%;
-      margin: auto;
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translate(-50%,25%);
-  }
-  
-#home figure > img{
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      max-width: 80%;
-      height: auto;
+#home figure img{
+    margin:1rem 0;
+    width: 100%;
+    max-width: 100%;
 }
 
-figure a{
-    display:inline-block;
-    width:100%;
-    text-align:center;
+#home figure figcaption{
+    color:var(--main-green);
+    font-size: 5vmin;
+    padding-top:2rem;
 }
+
+#social-media{
+    font-size:4vmin;
+    align-self: start;
+    padding-top:calc(10vh - .5rem);
+    position: relative;
+    z-index: 1;
+}
+
+#social-media a{
+    display:block;
+    padding: 1rem;
+    color:green;
+    background-color:white;
+    margin-bottom:.75rem;
+}
+
+#social-media a:hover{
+    background-color:transparent;
+}
+
+#social-media a:hover i{
+    color:white;
+}
+
+#social-media a:active{
+    box-shadow:0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);   
+}
+
+/* ######  HOME   ############################################### */
+ /* ######################################################################## * /
+
+  /* ######################################################################## * /
+/* ######  NAV   ############################################### */
 
 nav{
+    padding:0 !important;
+}
+
+nav > section{
   background-color:white;  
   display:flex;
   justify-content:space-around;
   flex-wrap:Wrap;
 }
 
-nav a{
+nav > section a{
     padding:.75rem 0;
   padding-top:1rem;
   color:white;
@@ -79,13 +128,18 @@ nav a{
   margin:0 2rem;
 }
 
-a.active{
+nav a.active{
     border-bottom:.25rem solid var(--main-green);
 }
 
-.box-shadow{
-    box-shadow:0 0 1rem 0.2rem rgba(0,0,0,.3)
+nav img{
+    max-width:100%;
 }
+
+/* ######  NAV   ############################################### */
+/* ############################################################ * /
+
+/**/
 
 #apoios{
     margin-bottom: 3rem;
@@ -104,3 +158,53 @@ footer{
     font-size:0.8rem;
     z-index:-1;
 }
+
+/* ############################################################ * /
+/* ######  MEDIA QUERIES ####################################### */
+
+@media screen and (max-width:600px){
+     
+    header{
+        flex-wrap:wrap;
+    }
+
+    #home{
+        flex-basis:95%;
+        padding-right:1rem;
+        padding-bottom:0;
+    }
+
+    #social-media{
+        padding-top:0;
+    }
+
+    #social-media a{
+        display:inline-block;
+        align-self: flex-end;
+    }
+
+     #home figure{
+         padding:4rem 1.5rem;
+     }
+}
+
+@media screen and (max-width:768px){
+    
+    .navbar-toggler{
+        width: 100%;
+        background-color:white;
+        text-align:left;
+    }
+    
+    .navbar-toggler + *{
+        flex-direction: column;
+        justify-content: space-around;
+        height: calc(100vh - 1rem);
+        position:relative;
+        z-index:1001;
+    }
+    }
+
+   
+/* ######  MEDIA QUERIES ####################################### */
+ /* ############################################################ * /
