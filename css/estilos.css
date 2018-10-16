@@ -181,7 +181,11 @@ nav a.active:before{
 /* ############################################################ * /
 /* ######  CRONOLOGIA  ######################################### */
 
-#cronologia {
+#cronologia h1{
+    margin-bottom:-4rem;
+}
+
+#cronologia > section {
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -189,7 +193,7 @@ nav a.active:before{
     padding: 1rem 4rem;
   }
 
-  #cronologia > button {
+  #cronologia > section > button {
     background: white;
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
     display: flex;
@@ -203,13 +207,13 @@ nav a.active:before{
     
   }
 
-  #cronologia > button h3 {
+  #cronologia > section > button h3 {
     opacity: 0;
     font-size: 1.45em;
     padding: .25rem;    
   }
 
-  #cronologia > button:hover, #cronologia > button:active {
+  #cronologia > section > button:hover, #cronologia > section > button:active {
     flex-grow: 3;
     transition: flex-grow .75s;
     cursor:pointer;
@@ -220,7 +224,7 @@ nav a.active:before{
 
   }
 
-  #cronologia button:hover h3, #cronologia button:active h3 {
+  #cronologia section > button:hover h3, #cronologia section > button:active h3 {
     opacity: 1;
     transition-timing-function: ease-out;
     transition: opacity .55s;
@@ -232,6 +236,12 @@ nav a.active:before{
 /* ########################################################################################### */
 /* ##############################  BOOTSTRAP RESETS  ######################################### */
 /* ########################################################################################### */
+
+/* unica forma que consegui de impedir o scroll qdo modal esta aberto */
+body.modal-open {
+    position: fixed;
+    top:0;bottom:0;left:0;right:0;
+}
 
   .modal-content{
     background-clip: 0;
@@ -247,6 +257,25 @@ nav a.active:before{
     pointer-events: all;
   }
  
+  .modal-body {
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+
+  .modal-body > *{
+    padding: 4rem 3rem;
+  }
+
+  .modal-body .icon3D{
+    max-width: 50%;
+    display:flex;
+  }
+
+  .icon3D > *{
+      margin:auto;
+  }
+
     .carousel{
       width:100%;
     }
@@ -328,15 +357,15 @@ footer{
         z-index:1001;
     }
 
-    #cronologia {
+    #cronologia > section{
         flex-direction: column;
         padding: 1rem !important;
       }
-      #cronologia > button {
+      #cronologia > section > button {
         height: auto;
         width: 90%;
       }
-      #cronologia > button:hover {
+      #cronologia > section > button:hover {
         flex-grow: 4;
       }
 }
