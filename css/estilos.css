@@ -230,8 +230,24 @@ nav a.active:before{
     transition: opacity .55s;
     transition-delay: .3s;
     color:#222;
-
+  } 
+  
+  .modal-body > *{
+    padding: 4rem 3rem;
+    width:50%;
   }
+
+  .modal-body .icon3D{
+    display:flex;
+    padding: 0;
+  }
+
+  .icon3D canvas{
+    width: 100% !important;
+    height:100% !important;
+    margin: auto;
+  }
+
 
 /* ########################################################################################### */
 /* ##############################  BOOTSTRAP RESETS  ######################################### */
@@ -262,20 +278,6 @@ body.modal-open {
     align-items: center;
     align-content: center;
   }
-
-  .modal-body > *{
-    padding: 4rem 3rem;
-  }
-
-  .modal-body .icon3D{
-    max-width: 50%;
-    display:flex;
-  }
-
-  .icon3D > *{
-      margin:auto;
-  }
-
     .carousel{
       width:100%;
     }
