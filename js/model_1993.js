@@ -78,9 +78,7 @@ if ( WEBGL.isWebGLAvailable() === false ) {
 				renderer.setSize( window.innerWidth, window.innerHeight );
 				renderer.gammaOutput = true;
 				container.appendChild( renderer.domElement );
-				// stats
-				stats = new Stats();
-				container.appendChild( stats.dom );
+	
                 
               
 				//

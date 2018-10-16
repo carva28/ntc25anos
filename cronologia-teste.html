@@ -8,178 +8,621 @@
     <meta name="keywords" content="NTC, DeCA, Universidade de Aveiro, Aniversário, 25 anos, Novas Tecnologias da Comunicação">
     <meta name="description" content="Site de celebração dos 25 anos do curso de Novas Tecnologias da Comunicação (NTC) do Departamento de Comunicação e Arte (DeCA) da Universidade de Aveiro (UA)">
 
-    <!-- JQUERY JS-->
-    <script src="lib/js/jquery-3.3.1.min.js"></script>
+    <meta property="og:image" content="img/preview.png" />
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+
     <!--BOOTSTRAP CSS-->
-    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
-    <!--BOOTSTRAP JS-->
-    <script src="lib/js/bootstrap.min.js"></script>
-    <!--THREE JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/96/three.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
     <!--ESTILOS GERAIS-->
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
 
-    <title>25 Anos de Novas Tecnologias da Comunicação</title>
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <!-- BOOTSTRAP JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!--THREE JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/96/three.min.js"></script>
     
-    <style>
- 
+    
+    
 
-    
-    </style>
     
     
 		<script src="three/three.js"></script>
 
 		<script src="three/OrbitControls.js"></script>
 		<script src="three/GLTFLoader.js"></script>
-		<script src="three/CameraHelper.js"></script>
-
 		<script src="three/WebGL.js"></script>
 		<script src="three/stats.min.js"></script>
+
+
+    <title>25 Anos de Novas Tecnologias da Comunicação</title>
+
+    <!-- #######################################
+    01101000 01100101 01101100 01101100 01101111 
+    00100000 01100011 01110101 01110010 01101001 
+    01101111 01110101 01110011 00100000 01100110 
+    01100101 01101100 01101100 01101111 01110111 
+    00101110 00100000 01110100 01101000 01100101 
+    00100000 01100011 01101111 01101101 01110000 
+    01101100 01100101 01110100 01100101 00100000 
+    01110111 01100101 01100010 01110011 01101001 
+    01110100 01100101 00100000 01110111 01101001 
+    01101100 01101100 00100000 01100010 01100101 
+    00100000 01110000 01110101 01100010 01101100 
+    01101001 01110011 01101000 01100101 01100100 
+    00100000 01110011 01101111 01101111 01101110 
+    00101110 00100000 01110011 01110100 01100001 
+    01111001 00100000 01110100 01110101 01101110 
+    01100101 01100100 00100000 01100110 01101111 
+    01110010 00100000 01101110 01100101 01110111 
+    01110011 00101110 00100000 ######## ########
+    #########################################-->
+
 </head>
 
-<body>
+<!-- faz referencia à nav-->
+
+<body data-spy="scroll" data-target="#espiar" data-offset="50">
+
+    <header>
+        <section id="home">
+            <figure class="box-shadow">
+                <img src="img/logo_web_v2.png" alt='Logotipo de celebração dos 25 ANOS do curso de Novas Tecnologias da Comunicação'>
+                <figcaption>
+                    <a href="#sobre">
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                </figcaption>
+            </figure>
+        </section>
+
+        <section id="social-media">
+            <a href="https://www.facebook.com/25NTC/" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/25anosntc/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </section>
+    </header>
+
+    <nav class="navbar navbar-expand-md sticky-top shadow">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <img src="img/burger-menu.png" class="navbar-toggler-icon">
+        </button>
+
+        <section id="espiar" class="collapse navbar-collapse">
+            <a class="nav-link" href="#sobre">NTC</a>
+            <a class="nav-link" href="#cronologia">Cronologia</a>
+            <a class="nav-link" href="#testemunhos">Testemunhos</a>
+            <a class="nav-link" href="#equipa">Equipa</a>
+        </section>
+    </nav>
+
+
+    <section id="sobre">
+        <h1>NTC</h1>
+    </section>
 
     <section id="cronologia">
-        <button type="button" data-toggle="modal" data-target="#modal-1">
-            <h3>[1993-1997]</h3>
-        </button>
-        <button type="button" data-toggle="modal" data-target="#modal-2">
-            <h3>[1998-2002]</h3>
-        </button>
-        <button type="button" data-toggle="modal" data-target="#modal-3">
-            <h3>[2003-2007]</h3>
-        </button>
-        <button type="button" data-toggle="modal" data-target="#modal-4">
-            <h3>[2008-2012]</h3>
-        </button>
-        <button type="button" data-toggle="modal" data-target="#modal-5">
-            <h3>[2013-2017]</h3>
-        </button>
+        <h1>CRONOLOGIA</h1>
+        <section>
 
-        <!-- Modal 1 [1993-1997] -->
-        <article class="modal fade px-4" id="modal-1" tabindex="-1" role="dialog" aria-labelledby="modal-1" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <!-- Start of Carousel -->
-                <div  id="carousel-1993" class="carousel slide" data-ride="carousel" data-interval="false">
-                    <div class="carousel-inner">
-                        <div class="carousel-item modal-content active">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="modal-1">1993</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
+            <button type="button" data-toggle="modal" data-target="#modal-1">
+                <h3>[1993-1997]</h3>
+            </button>
+            <button type="button" data-toggle="modal" data-target="#modal-2">
+                <h3>[1998-2002]</h3>
+            </button>
+            <button type="button" data-toggle="modal" data-target="#modal-3">
+                <h3>[2003-2007]</h3>
+            </button>
+            <button type="button" data-toggle="modal" data-target="#modal-4">
+                <h3>[2008-2012]</h3>
+            </button>
+            <button type="button" data-toggle="modal" data-target="#modal-5">
+                <h3>[2013-2017]</h3>
+            </button>
+
+            <!-- Modal 1 [1993-1997] -->
+            <article class="modal fade px-4" id="modal-1" tabindex="-1" role="dialog" aria-labelledby="modal-1" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <!-- Start of Carousel 1 [1993-1997] -->
+                    <div id="carousel-1993" class="carousel slide" data-ride="carousel" data-keyboard="true" data-interval="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item modal-content active">
+                                <div class="modal-header">
+                                    <h5  class="modal-title">1993</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <article class="modal-body">
+                                    <section class="info">
+                                        <p>Non et asperiores aut accusamus. Omnis ea nihil accusantium est sequi sequi. Quibusdam
+                                            omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
+                                            quod qui. </p>
+                                    </section>
+                                    <section id="ano1993" class="icon3D">
+                                          
+                                    CONTENT 1
+                                    </section>
+                                </article>
                             </div>
-                            <div id="modal-body" class="modal-body">
-                                <script src="js/model_1993.js"></script>
-
+                            <div class="carousel-item modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">1994</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div id="ano1994" class="modal-body">
+                                    CONTENT 2
+                                </div>
+                            </div>
+                            <div class="carousel-item modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">1995</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div id="ano1995" class="modal-body">
+                                    CONTENT 3
+                                </div>
+                            </div>
+                            <div class="carousel-item modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">1996</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div id="ano1996" class="modal-body">
+                                    CONTENT 4
+                                </div>
+                            </div>
+                            <div class="carousel-item modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">1997</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div id="ano1997" class="modal-body">
+                                    CONTENT 5
+                                </div>
                             </div>
                         </div>
-                        <div class="carousel-item modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="modal-1">1994</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div id="modal-body2" class="modal-body">
-                                CONTENT 2
-                                
-                                <!--<script src="js/model_1995.js"></script>-->
-                            
-                            </div>
-                        </div>
-                        <div class="carousel-item modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="modal-1">1995</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div id="modal-body3" class="modal-body">
-                                CONTENT 3
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Start of Carousel Controls -->
-                    <a  class="carousel-control-prev" href="#carousel-1993"  data-slide="prev" id='mylink'>
+                        <!-- Start of Carousel Controls -->
+                        <a class="carousel-control-prev" href="#carousel-1993" role="button" data-slide="prev" id="mylink">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span>
-                    </a>
-                    <a  class="carousel-control-next" href="#carousel-1993"  data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-            
-
-                        <script type="text/javascript">
-
-                        var myLink = document.getElementById('mylink');
-
-                        myLink.onclick = function(){
-
-                            var script = document.createElement("script");
-                            script.type = "text/javascript";
-                            script.src = "js/model_1995.js"; 
-                            document.getElementsByTagName("head")[0].appendChild(script);
-                            return false;
-
-                        }
-
-
-                        </script>
-                    
-                    <!-- End of Carousel Controls -->
-
+                        </a>
+                        <a class="carousel-control-next" href="#carousel-1993" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                        
+                        
+                        <!-- End of Carousel Controls -->
+                    </div>
+                    <!-- End of Carousel 1 [1993-1997]-->
                 </div>
-                
-                <!-- End of Carousel -->
-                
-                
-            
+            </article>
+            <!-- End of Modal 1 -->
 
+            <!-- Modal 2 [1998-2002] -->
+            <article class="modal fade px-4" id="modal-2" tabindex="-1" role="dialog" aria-labelledby="modal-2" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <!-- Start of Carousel 2 [1998-2002] -->
+                    <div id="carousel-1998" class="carousel slide" data-ride="carousel" data-interval="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item modal-content active">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">1998</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <article class="modal-body">
+                                    <section class="info">
+                                        <p>Non et asperiores aut accusamus. Omnis ea nihil accusantium est sequi sequi. Quibusdam
+                                            omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
+                                            quod qui. </p>
+                                    </section>
+                                    <section id="1998" class="icon3D">
+                                          
+                                    CONTENT 1
+                                   
+                                    </section>
+                                </article>
+                            </div>
+                            <div class="carousel-item modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">1999</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    CONTENT 2
+                                    
+                                </div>
+                            </div>
+                            <div class="carousel-item modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">2000</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    CONTENT 3
+                                </div>
+                            </div>
+                            <div class="carousel-item modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">2001</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    CONTENT 4
+                                </div>
+                            </div>
+                            <div class="carousel-item modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">2002</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    CONTENT 5
+                                </div>
+                            </div>
+                        </div>
 
-		
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
+                        <!-- Start of Carousel Controls -->
+                        <a class="carousel-control-prev" href="#carousel-1998" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel-1998" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                        <!-- End of Carousel Controls -->
 
-                <!--
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modal-1">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
                     </div>
-                    <div class="modal-body">
-                        CONTENT
-                    </div>
-                    <div class="modal-footer justify-content-between">
-                        <button type="button">Prev</button>
-                        <button type="button">Next</button>
-                    </div>
+                    <!-- End of Carousel 2 [1998-2002]-->
                 </div>
-                -->
-            </div>
-        </article>
-        <!-- End of Modal -->
+            </article>
+            <!-- End of Modal 2 -->
 
+            <!-- Modal 3 [2003-2007] -->
+            <article class="modal fade px-4" id="modal-3" tabindex="-1" role="dialog" aria-labelledby="modal-3" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <!-- Start of Carousel 3 [2003-2007] -->
+                    <div id="carousel-2003" class="carousel slide" data-ride="carousel" data-interval="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item modal-content active">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">2003</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <article class="modal-body">
+                                    <section class="info">
+                                        <p>Non et asperiores aut accusamus. Omnis ea nihil accusantium est sequi sequi. Quibusdam
+                                            omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
+                                            quod qui. </p>
+                                    </section>
+                                    <section id="2003" class="icon3D">
+                                          
+                                    CONTENT 1
+                                    </section>
+                                </article>
+                            </div>
+                            <div class="carousel-item modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">2004</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    CONTENT 2
+                                </div>
+                            </div>
+                            <div class="carousel-item modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">2005</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    CONTENT 3
+                                </div>
+                            </div>
+                            <div class="carousel-item modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">2006</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    CONTENT 3
+                                </div>
+                            </div>
+                            <div class="carousel-item modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">2007</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    CONTENT 5
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Start of Carousel Controls -->
+                        <a class="carousel-control-prev" href="#carousel-2003" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel-2003" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                        <!-- End of Carousel Controls -->
+
+                    </div>
+                    <!-- End of Carousel 3 [2003-2007]-->
+                </div>
+            </article>
+            <!-- End of Modal 3 -->
+
+
+            <!-- Modal 4 [2008-2012] -->
+            <article class="modal fade px-4" id="modal-4" tabindex="-1" role="dialog" aria-labelledby="modal-4" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <!-- Start of Carousel 3 [2008-2012] -->
+                    <div id="carousel-2008" class="carousel slide" data-ride="carousel" data-interval="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item modal-content active">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">2008</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <article class="modal-body">
+                                    <section class="info">
+                                        <p>Non et asperiores aut accusamus. Omnis ea nihil accusantium est sequi sequi. Quibusdam
+                                            omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
+                                            quod qui. </p>
+                                    </section>
+                                    <section id="2008" class="icon3D">
+                                          
+                                    CONTENT 1
+                                    </section>
+                                </article>
+                            </div>
+                            <div class="carousel-item modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">2009</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    CONTENT 2
+                                </div>
+                            </div>
+                            <div class="carousel-item modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">2010</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    CONTENT 3
+                                </div>
+                            </div>
+                            <div class="carousel-item modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">2011</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    CONTENT 4
+                                </div>
+                            </div>
+                            <div class="carousel-item modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">2012</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    CONTENT 5
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Start of Carousel Controls -->
+                        <a class="carousel-control-prev" href="#carousel-2008" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel-2008" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                        <!-- End of Carousel Controls -->
+
+                    </div>
+                    <!-- End of Carousel 4 [2008-2012]-->
+                </div>
+            </article>
+            <!-- End of Modal 4 -->
+
+
+            <!-- Modal 5 [2013-2017] -->
+            <article class="modal fade px-4" id="modal-5" tabindex="-1" role="dialog" aria-labelledby="modal-5" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <!-- Start of Carousel 3 [2013-2017] -->
+                    <div id="carousel-2013" class="carousel slide" data-ride="carousel" data-interval="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item modal-content active">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">2013</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    CONTENT 1
+                                </div>
+                            </div>
+                            <div class="carousel-item modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">2014</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    CONTENT 2
+                                </div>
+                            </div>
+                            <div class="carousel-item modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">2015</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    CONTENT 3
+                                </div>
+                            </div>
+                            <div class="carousel-item modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">2016</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    CONTENT 4
+                                </div>
+                            </div>
+                            <div class="carousel-item modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">2017</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    CONTENT 5
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Start of Carousel Controls -->
+                        <a class="carousel-control-prev" href="#carousel-2013" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel-2013" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                        <!-- End of Carousel Controls -->
+
+                    </div>
+                    <!-- End of Carousel 5 [2013-2017]-->
+                </div>
+            </article>
+            <!-- End of Modal 5 -->
+
+        </section>
     </section>
+
+    <section id="testemunhos">
+        <h1>TESTEMUNHOS</h1>
+    </section>
+
+    <section id="equipa">
+        <h1>EQUIPA</h1>
+    </section>
+
+    <section id="apoios">
+        <h1>APOIOS</h1>
+    </section>
+
+    <footer>
+        @ Equipa dos 25 anos Novas Tecnologias da Comunicação
+    </footer>
+
+    <script>
+        var carPrev = false;
+        var carNext = false;
+        $('.carousel-control-prev').click(function () {
+            carPrev = true;
+            carNext = false;
+        });
+        $('.carousel-control-next').click(function () {
+            carPrev = false;
+            carNext = true;
+        });
+        $('.close').click(function () {
+            //carousel fechado
+        });
+        var buttonPressed = "";
+        $("#carousel-1993").on('slid.bs.carousel', function () {
+            var ano = 1993;
+            
+            console.log("VAI MUDAR DE SLIDE no CAROUSEL 1993");
+            if (carPrev)
+                console.log("GOING PREV");
+                
+               
+                //init(ano);
+            if (carNext)
+                console.log("GOING NEXT");
+                
+        });
+    </script>
+    
+    <script src="js/3d_modelos.js"></script>
 
 </body>
 
 </html>
+                
+                
+  

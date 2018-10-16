@@ -1,18 +1,27 @@
 if ( WEBGL.isWebGLAvailable() === false ) {
 				document.body.appendChild( WEBGL.getWebGLErrorMessage() );
 			}
-			var container, stats, controls;
-			var camera, scene, renderer, light;
+			
           
         
-			init();
-			animate();
+			//init();
+			
+
+            for (var i=1993; i<1996; i++){
+                init(i); 
+                
+            }
+        
             
             
-            
-			function init() {
-               
-                container = document.getElementById('modal-body2');
+			function init(year) {
+                var mesh;
+                var container, controls;
+			     var camera, scene, renderer, light;
+                
+				//container = document.createElement( 'div' );
+				//document.body.appendChild( container );
+                container = document.getElementById("ano"+year);
 				camera = new THREE.PerspectiveCamera( 0.5, window.innerWidth / window.innerHeight, 0.25, 1000 );
 				//camera.position.set( -1.8, 0.9, 2.7 );
                 camera.position.x = 0;
@@ -32,15 +41,18 @@ if ( WEBGL.isWebGLAvailable() === false ) {
                 
                 
 				scene = new THREE.Scene();
+                
 				light = new THREE.HemisphereLight( 0xbbbbff, 0x444422 );
 				light.position.set( 1, 1, 0 );
 				scene.add( light );
-				
+                
+                
 
                 //MODEL INITIAL
-
+                
                 var loader = new THREE.GLTFLoader();
-                loader.load( 'models/19955.glb' , function ( gltf ) {
+                loader.load( 'models/'+year+'.glb' , function ( gltf ) {
+                    console.log("carregou modelo");
 					gltf.scene.traverse( function ( child ) {
 						if ( child.isMesh ) {
                             
@@ -49,12 +61,13 @@ if ( WEBGL.isWebGLAvailable() === false ) {
 					} );
                     
                     gltf.scene.rotation.set(Math.PI * 0.5, 0, 0)
-					scene.add( gltf.scene );
+					//scene.add( gltf.scene );
                     
                                     console.log("nome:",gltf.scene );
+                                    //console.log("nome:",gltf.scene );
+
                       mesh = gltf.scene;
                       scene.add(mesh);
-
 
                     
                     mesh.rotation.y += 0.006;
@@ -76,25 +89,15 @@ if ( WEBGL.isWebGLAvailable() === false ) {
 				renderer.setSize( window.innerWidth, window.innerHeight );
 				renderer.gammaOutput = true;
 				container.appendChild( renderer.domElement );
-				// stats
-				stats = new Stats();
-				container.appendChild( stats.dom );
-                
+	
+                animate();
               
 				//
                 
-                
-			}
-			
-            
-            
-            
-			//
-			function animate() {
+                function animate() {
              
 				requestAnimationFrame( animate );
 				renderer.render( scene, camera );
-				stats.update();
 			}
                 
                 
@@ -108,3 +111,11 @@ if ( WEBGL.isWebGLAvailable() === false ) {
                     requestAnimationFrame(render);
                     //WebGLRenderer.render(scene, camera);
             }
+                
+			}
+			
+            
+            
+            
+			//
+			
