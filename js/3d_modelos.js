@@ -24,21 +24,12 @@ function init(year) {
     camera = new THREE.PerspectiveCamera(0.25, window.innerWidth / window.innerHeight, 0.25, 250);
     camera.position.set(0, 150, 50);
 
-    /* set controls */
-  
-    controls = new THREE.OrbitControls(camera);
-    controls.target.set(0, 0, 0);
-    controls.enableRotate = true;
-    controls.minPolarAngle = Math.PI * 0.5;
-    controls.maxPolarAngle = Math.PI * 0.5;
-    controls.enableZoom = false;
-    controls.enableKeys = false;
-    controls.noPan = true;
-    controls.update();
+   
+ 
 
     /* set illumination */
     light = new THREE.HemisphereLight(0xbbbbff, 0x444422);
-    light.position.set(1, 1, 0);
+    light.position.set(0, 150,500);
     scene.add(light);
 
 
@@ -52,7 +43,7 @@ function init(year) {
         });
 
         // rotate scene to object face forward
-        gltf.scene.rotation.set(Math.PI * 0.5, 0, 0);
+        gltf.scene.rotation.set(Math.PI * 0.5 , 0, 0);
 
         mesh = gltf.scene;
         scene.add(mesh);
@@ -71,6 +62,18 @@ function init(year) {
     renderer.gammaOutput = true;
     container.appendChild(renderer.domElement);
 
+    /* set controls */
+    controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.target.set(0, 0, 0);
+    controls.enableRotate = true;
+    controls.minPolarAngle = Math.PI * 0.5;
+    controls.maxPolarAngle = Math.PI * 0.5;
+    controls.enableZoom = false;
+    controls.enableKeys = false;
+    controls.noPan = true;
+    controls.update();
+
+
     animate();
 
     function animate() {
@@ -80,7 +83,7 @@ function init(year) {
 
     function render() {
         if (mesh) {
-            mesh.rotation.z -= 0.006;
+            mesh.rotation.z -= 0.008;
         }
         requestAnimationFrame(render);
     }
