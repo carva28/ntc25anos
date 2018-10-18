@@ -182,10 +182,12 @@ nav a.active:before{
 /* ######  CRONOLOGIA  ######################################### */
 
 #cronologia h1{
-    margin-bottom:-4rem;
+   flex-basis:20%;
+   margin-right: 2rem;
+    font-size:2rem;
 }
 
-#cronologia > section {
+#cronologia > div {
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -193,7 +195,7 @@ nav a.active:before{
     padding: 1rem 4rem;
   }
 
-  #cronologia > section > button {
+  #cronologia > div > button {
     background: white;
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
     display: flex;
@@ -207,14 +209,20 @@ nav a.active:before{
     
   }
 
-  #cronologia > section > button h3 {
-    opacity: 0;
+  #cronologia > div > button h3 {
+    opacity: 0.5;
     font-size: 1.45em;
     padding: .25rem;    
   }
 
-  #cronologia > section > button:hover, #cronologia > section > button:active {
-    flex-grow: 3;
+  
+  #cronologia div > button{
+    flex-grow:.2;
+    }
+
+
+  #cronologia > div > button:hover, #cronologia > div > button:active {
+    flex-grow: 1;
     transition: flex-grow .75s;
     cursor:pointer;
    /* background-color:#00c853;*/
@@ -224,16 +232,24 @@ nav a.active:before{
 
   }
 
-  #cronologia section > button:hover h3, #cronologia section > button:active h3 {
-    opacity: 1;
+
+  #cronologia div > button:hover h3, #cronologia div > button:active h3 {
+    opacity: .9;
     transition-timing-function: ease-out;
-    transition: opacity .55s;
-    transition-delay: .3s;
+    transition: opacity .3s;
+    transition-delay: .22s;
     color:#222;
   } 
+
+  .nav-link{
+      padding-top:1rem;
+      padding-bottom:.75rem;
+  }
+
   
   .modal-body > *{
-    padding: 4rem 3rem;
+    padding: 0 4rem 3rem 4rem;
+    
     width:50%;
   }
 
@@ -242,12 +258,56 @@ nav a.active:before{
     padding: 0;
   }
 
+  .icon3D:hover{
+      cursor: pointer;
+  }
+
   .icon3D canvas{
     width: 100% !important;
     height:100% !important;
     margin: auto;
   }
 
+
+  .carousel-item.active{
+      display:flex;
+
+  }
+  
+  .modal-header{
+    display: block;
+    width: 100%;
+    background-color: var(--main-green);  
+    color: white;
+    border-radius: 0 !important
+  }
+
+  .modal-header h5{
+      font-size:2rem;
+      text-align: center;
+  }
+
+  h5.modal-title{
+    font-size:8vmin;
+    line-height: 3;
+    font-weight: bold;
+    letter-spacing: .5rem;
+
+  }
+
+  .close{
+      font-size:5.5rem;
+      line-height: 0.5;
+      padding:2rem;
+      color:#e1e1e1;
+      opacity: .9;
+  }
+
+  .close:not(:disabled):not(.disabled):focus, .close:not(:disabled):not(.disabled):hover{
+      color:white;
+      opacity: 1;
+      transition: opacity 2s;
+  }
 
 /* ########################################################################################### */
 /* ##############################  BOOTSTRAP RESETS  ######################################### */
@@ -275,22 +335,24 @@ body.modal-open {
  
   .modal-body {
     display: flex;
-    align-items: center;
-    align-content: center;
+    align-items: flex-start;
+    padding-top: 7%;
   }
     .carousel{
       width:100%;
     }
 
     .carousel-inner, .carousel-item {
-      height:100%;
+      height:85vh;
     }
 
-    .carousel-inner ~ a{
+    .carousel-inner > a{
       z-index: 999;
-      height:4rem;
+      height: 4rem;
+      width: 25%;
       background-color: #222;
-      top:calc(100% - 4rem)
+      opacity: .1;
+      top: calc(85vh - 4rem);
     }
 
 /* ######  CRONOLOGIA  ########################################## */
@@ -359,15 +421,15 @@ footer{
         z-index:1001;
     }
 
-    #cronologia > section{
+    #cronologia > div{
         flex-direction: column;
         padding: 1rem !important;
       }
-      #cronologia > section > button {
+      #cronologia > div > button {
         height: auto;
         width: 90%;
       }
-      #cronologia > section > button:hover {
+      #cronologia > div > button:hover {
         flex-grow: 4;
       }
 }
