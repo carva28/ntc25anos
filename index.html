@@ -29,33 +29,12 @@
     <!--THREE JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/96/three.min.js"></script>
 
-    
-		<script src="three/OrbitControls.js"></script>
-		<script src="three/GLTFLoader.js"></script>
-		<script src="three/WebGL.js"></script>
+
+    <script src="three/OrbitControls.js"></script>
+    <script src="three/GLTFLoader.js"></script>
+    <script src="three/WebGL.js"></script>
 
     <title>25 Anos de Novas Tecnologias da Comunicação</title>
-
-    <!-- #######################################
-    01101000 01100101 01101100 01101100 01101111 
-    00100000 01100011 01110101 01110010 01101001 
-    01101111 01110101 01110011 00100000 01100110 
-    01100101 01101100 01101100 01101111 01110111 
-    00101110 00100000 01110100 01101000 01100101 
-    00100000 01100011 01101111 01101101 01110000 
-    01101100 01100101 01110100 01100101 00100000 
-    01110111 01100101 01100010 01110011 01101001 
-    01110100 01100101 00100000 01110111 01101001 
-    01101100 01101100 00100000 01100010 01100101 
-    00100000 01110000 01110101 01100010 01101100 
-    01101001 01110011 01101000 01100101 01100100 
-    00100000 01110011 01101111 01101111 01101110 
-    00101110 00100000 01110011 01110100 01100001 
-    01111001 00100000 01110100 01110101 01101110 
-    01100101 01100100 00100000 01100110 01101111 
-    01110010 00100000 01101110 01100101 01110111 
-    01110011 00101110 00100000 ######## ########
-    #########################################-->
 
 </head>
 
@@ -85,6 +64,7 @@
         </section>
     </header>
 
+    <!-- NAVEGAÇAO -->
     <nav class="navbar navbar-expand-md sticky-top shadow">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -93,35 +73,40 @@
 
         <section id="espiar" class="collapse navbar-collapse">
             <a class="nav-link" href="#sobre">NTC</a>
-            <a class="nav-link" href="#cronologia">Cronologia</a>
+            <a class="nav-link" href="#cronologia">25 anos</a>
             <a class="nav-link" href="#testemunhos">Testemunhos</a>
-            <a class="nav-link" href="#equipa">Equipa</a>
+            <a class="nav-link" href="#equipa">Equipa 25 anos</a>
         </section>
     </nav>
 
-
+    <!-- SOBRE -->
     <section id="sobre">
         <h1>NTC</h1>
     </section>
-
+    
+    <!-- CRONOLOGIA -->
     <section id="cronologia">
-        <h1>CRONOLOGIA</h1>
-        <section>
-
+        <div>
+            <h1 style="margin-right:2rem;">Um ícone para cada ano</h1>
             <button type="button" data-toggle="modal" data-target="#modal-1">
-                <h3>[1993-1997]</h3>
+                <h3>1993 <br>|
+                    <br>1997</h3>
             </button>
             <button type="button" data-toggle="modal" data-target="#modal-2">
-                <h3>[1998-2002]</h3>
+                <h3>1998 <br>|
+                    <br>2002</h3>
             </button>
             <button type="button" data-toggle="modal" data-target="#modal-3">
-                <h3>[2003-2007]</h3>
+                <h3>2003 <br>|
+                    <br>2007</h3>
             </button>
             <button type="button" data-toggle="modal" data-target="#modal-4">
-                <h3>[2008-2012]</h3>
+                <h3>2008 <br>|
+                    <br>2012</h3>
             </button>
             <button type="button" data-toggle="modal" data-target="#modal-5">
-                <h3>[2013-2017]</h3>
+                <h3>2013 <br>|
+                    <br>2017</h3>
             </button>
 
             <!-- Modal 1 [1993-1997] -->
@@ -130,12 +115,24 @@
                     <!-- Start of Carousel 1 [1993-1997] -->
                     <div id="carousel-1993" class="carousel slide" data-ride="carousel" data-keyboard="true" data-interval="false">
                         <div class="carousel-inner">
+
+                            <!-- Start of Carousel Controls -->
+                            <a class="carousel-control-prev" href="#carousel-1993" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carousel-1993" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            <!-- End of Carousel Controls -->
+                            
                             <div class="carousel-item modal-content active">
                                 <div class="modal-header">
-                                    <h5 class="modal-title">1993</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
+                                    <h5 class="modal-title">1993</h5>
                                 </div>
                                 <article class="modal-body">
                                     <section class="info">
@@ -143,17 +140,15 @@
                                             omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
                                             quod qui. </p>
                                     </section>
-                                    <section id="ano1993" class="icon3D">
-
-                                    </section>
+                                    <section id="ano1993" class="icon3D"></section>
                                 </article>
                             </div>
                             <div class="carousel-item modal-content">
                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                     <h5 class="modal-title">1994</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
                                 </div>
                                 <div class="modal-body">
                                     <section class="info">
@@ -161,17 +156,15 @@
                                             omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
                                             quod qui. </p>
                                     </section>
-                                    <section id="ano1994" class="icon3D">
-
-                                    </section>
+                                    <section id="ano1994" class="icon3D"></section>
                                 </div>
                             </div>
                             <div class="carousel-item modal-content">
                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                     <h5 class="modal-title">1995</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
                                 </div>
                                 <div class="modal-body">
                                     <section class="info">
@@ -179,17 +172,15 @@
                                             omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
                                             quod qui. </p>
                                     </section>
-                                    <section id="ano1995" class="icon3D">
-
-                                    </section>
+                                    <section id="ano1995" class="icon3D"></section>
                                 </div>
                             </div>
                             <div class="carousel-item modal-content">
                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                     <h5 class="modal-title">1996</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
                                 </div>
                                 <div class="modal-body">
                                     <section class="info">
@@ -197,17 +188,15 @@
                                             omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
                                             quod qui. </p>
                                     </section>
-                                    <section id="ano1996" class="icon3D">
-
-                                    </section>
+                                    <section id="ano1996" class="icon3D"></section>
                                 </div>
                             </div>
                             <div class="carousel-item modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title">1997</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
+                                    <h5 class="modal-title">1997</h5>
                                 </div>
                                 <div class="modal-body">
                                     <section class="info">
@@ -215,23 +204,11 @@
                                             omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
                                             quod qui. </p>
                                     </section>
-                                    <section id="ano1997" class="icon3D">
-
-                                    </section>
+                                    <section id="ano1997" class="icon3D"></section>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Start of Carousel Controls -->
-                        <a class="carousel-control-prev" href="#carousel-1993" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carousel-1993" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                        <!-- End of Carousel Controls -->
                     </div>
                     <!-- End of Carousel 1 [1993-1997]-->
                 </div>
@@ -246,10 +223,10 @@
                         <div class="carousel-inner">
                             <div class="carousel-item modal-content active">
                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                     <h5 class="modal-title">1998</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
                                 </div>
                                 <div class="modal-body">
                                     <section class="info">
@@ -257,17 +234,15 @@
                                             omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
                                             quod qui. </p>
                                     </section>
-                                    <section id="ano1998" class="icon3D">
-
-                                    </section>
+                                    <section id="ano1998" class="icon3D"></section>
                                 </div>
                             </div>
                             <div class="carousel-item modal-content">
                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                     <h5 class="modal-title">1999</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
                                 </div>
                                 <div class="modal-body">
                                     <section class="info">
@@ -275,17 +250,15 @@
                                             omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
                                             quod qui. </p>
                                     </section>
-                                    <section id="ano1999" class="icon3D">
-
-                                    </section>
+                                    <section id="ano1999" class="icon3D"></section>
                                 </div>
                             </div>
                             <div class="carousel-item modal-content">
                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                     <h5 class="modal-title">2000</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
                                 </div>
                                 <div class="modal-body">
                                     <section class="info">
@@ -293,17 +266,15 @@
                                             omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
                                             quod qui. </p>
                                     </section>
-                                    <section id="ano2000" class="icon3D">
-
-                                    </section>
+                                    <section id="ano2000" class="icon3D"></section>
                                 </div>
                             </div>
                             <div class="carousel-item modal-content">
                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                     <h5 class="modal-title">2001</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
                                 </div>
                                 <div class="modal-body">
                                     <section class="info">
@@ -311,17 +282,15 @@
                                             omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
                                             quod qui. </p>
                                     </section>
-                                    <section id="ano2001" class="icon3D">
-
-                                    </section>
+                                    <section id="ano2001" class="icon3D"></section>
                                 </div>
                             </div>
                             <div class="carousel-item modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title">2002</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
+                                    <h5 class="modal-title">2002</h5>
                                 </div>
                                 <div class="modal-body">
                                     <section class="info">
@@ -329,9 +298,7 @@
                                             omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
                                             quod qui. </p>
                                     </section>
-                                    <section id="ano2002" class="icon3D">
-
-                                    </section>
+                                    <section id="ano2002" class="icon3D"></section>
                                 </div>
                             </div>
                         </div>
@@ -361,10 +328,10 @@
                         <div class="carousel-inner">
                             <div class="carousel-item modal-content active">
                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                     <h5 class="modal-title">2003</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
                                 </div>
                                 <div class="modal-body">
                                     <section class="info">
@@ -372,17 +339,15 @@
                                             omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
                                             quod qui. </p>
                                     </section>
-                                    <section id="ano2003" class="icon3D">
-
-                                    </section>
+                                    <section id="ano2003" class="icon3D"></section>
                                 </div>
                             </div>
                             <div class="carousel-item modal-content">
                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                     <h5 class="modal-title">2004</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
                                 </div>
                                 <div class="modal-body">
                                     <section class="info">
@@ -390,17 +355,15 @@
                                             omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
                                             quod qui. </p>
                                     </section>
-                                    <section id="ano2004" class="icon3D">
-
-                                    </section>
+                                    <section id="ano2004" class="icon3D"></section>
                                 </div>
                             </div>
                             <div class="carousel-item modal-content">
                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                     <h5 class="modal-title">2005</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
                                 </div>
                                 <div class="modal-body">
                                     <section class="info">
@@ -408,17 +371,15 @@
                                             omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
                                             quod qui. </p>
                                     </section>
-                                    <section id="ano2005" class="icon3D">
-
-                                    </section>
+                                    <section id="ano2005" class="icon3D"></section>
                                 </div>
                             </div>
                             <div class="carousel-item modal-content">
                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                     <h5 class="modal-title">2006</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
                                 </div>
                                 <div class="modal-body">
                                     <section class="info">
@@ -426,17 +387,15 @@
                                             omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
                                             quod qui. </p>
                                     </section>
-                                    <section id="ano2006" class="icon3D">
-
-                                    </section>
+                                    <section id="ano2006" class="icon3D"></section>
                                 </div>
                             </div>
                             <div class="carousel-item modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title">2007</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
+                                    <h5 class="modal-title">2007</h5>
                                 </div>
                                 <div class="modal-body">
                                     <section class="info">
@@ -444,9 +403,7 @@
                                             omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
                                             quod qui. </p>
                                     </section>
-                                    <section id="ano2007" class="icon3D">
-
-                                    </section>
+                                    <section id="ano2007" class="icon3D"></section>
                                 </div>
                             </div>
                         </div>
@@ -476,10 +433,10 @@
                         <div class="carousel-inner">
                             <div class="carousel-item modal-content active">
                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                     <h5 class="modal-title">2008</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
                                 </div>
                                 <div class="modal-body">
                                     <section class="info">
@@ -487,17 +444,15 @@
                                             omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
                                             quod qui. </p>
                                     </section>
-                                    <section id="ano2008" class="icon3D">
-
-                                    </section>
+                                    <section id="ano2008" class="icon3D"></section>
                                 </div>
                             </div>
                             <div class="carousel-item modal-content">
                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                     <h5 class="modal-title">2009</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
                                 </div>
                                 <div class="modal-body">
                                     <section class="info">
@@ -505,17 +460,15 @@
                                             omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
                                             quod qui. </p>
                                     </section>
-                                    <section id="ano2009" class="icon3D">
-
-                                    </section>
+                                    <section id="ano2009" class="icon3D"></section>
                                 </div>
                             </div>
                             <div class="carousel-item modal-content">
                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                     <h5 class="modal-title">2010</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
                                 </div>
                                 <div class="modal-body">
                                     <section class="info">
@@ -523,17 +476,15 @@
                                             omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
                                             quod qui. </p>
                                     </section>
-                                    <section id="ano2010" class="icon3D">
-
-                                    </section>
+                                    <section id="ano2010" class="icon3D"></section>
                                 </div>
                             </div>
                             <div class="carousel-item modal-content">
                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                     <h5 class="modal-title">2011</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
                                 </div>
                                 <div class="modal-body">
                                     <section class="info">
@@ -541,17 +492,15 @@
                                             omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
                                             quod qui. </p>
                                     </section>
-                                    <section id="ano2011" class="icon3D">
-
-                                    </section>
+                                    <section id="ano2011" class="icon3D"></section>
                                 </div>
                             </div>
                             <div class="carousel-item modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title">2012</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
+                                    <h5 class="modal-title">2012</h5>
                                 </div>
                                 <div class="modal-body">
                                     <section class="info">
@@ -559,9 +508,7 @@
                                             omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
                                             quod qui. </p>
                                     </section>
-                                    <section id="ano2012" class="icon3D">
-
-                                    </section>
+                                    <section id="ano2012" class="icon3D"></section>
                                 </div>
                             </div>
                         </div>
@@ -591,10 +538,10 @@
                         <div class="carousel-inner">
                             <div class="carousel-item modal-content active">
                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                     <h5 class="modal-title">2013</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
                                 </div>
                                 <div class="modal-body">
                                     <section class="info">
@@ -602,17 +549,15 @@
                                             omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
                                             quod qui. </p>
                                     </section>
-                                    <section id="ano2013" class="icon3D">
-
-                                    </section>
+                                    <section id="ano2013" class="icon3D"></section>
                                 </div>
                             </div>
                             <div class="carousel-item modal-content">
                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                     <h5 class="modal-title">2014</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
                                 </div>
                                 <div class="modal-body">
                                     <section class="info">
@@ -620,17 +565,15 @@
                                             omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
                                             quod qui. </p>
                                     </section>
-                                    <section id="ano2014" class="icon3D">
-
-                                    </section>
+                                    <section id="ano2014" class="icon3D"></section>
                                 </div>
                             </div>
                             <div class="carousel-item modal-content">
                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                     <h5 class="modal-title">2015</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
                                 </div>
                                 <div class="modal-body">
                                     <section class="info">
@@ -638,17 +581,15 @@
                                             omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
                                             quod qui. </p>
                                     </section>
-                                    <section id="ano2015" class="icon3D">
-
-                                    </section>
+                                    <section id="ano2015" class="icon3D"></section>
                                 </div>
                             </div>
                             <div class="carousel-item modal-content">
                                 <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                     <h5 class="modal-title">2016</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
                                 </div>
                                 <div class="modal-body">
                                     <section class="info">
@@ -656,17 +597,15 @@
                                             omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
                                             quod qui. </p>
                                     </section>
-                                    <section id="ano2016" class="icon3D">
-
-                                    </section>
+                                    <section id="ano2016" class="icon3D"></section>
                                 </div>
                             </div>
                             <div class="carousel-item modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title">2017</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
+                                    <h5 class="modal-title">2017</h5>
                                 </div>
                                 <div class="modal-body">
                                     <section class="info">
@@ -674,9 +613,7 @@
                                             omnis eius sed quam sed nemo alias perferendis. Suscipit quis qui suscipit quis
                                             quod qui. </p>
                                     </section>
-                                    <section id="ano2017" class="icon3D">
-
-                                    </section>
+                                    <section id="ano2017" class="icon3D"></section>
                                 </div>
                             </div>
                         </div>
@@ -698,9 +635,9 @@
             </article>
             <!-- End of Modal 5 -->
 
-        </section>
+        </div>
     </section>
-
+ 
     <section id="testemunhos">
         <h1>TESTEMUNHOS</h1>
     </section>
