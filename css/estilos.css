@@ -383,8 +383,8 @@ body.modal-open {
   }
 
   #testemunhos li:first-child{
-        top: calc(18vmin + 4rem);
-        border: none;
+    top: calc(18vmin + 4rem);
+    border: none;
   }
 
   #testemunhos ul::after {
@@ -393,9 +393,7 @@ body.modal-open {
     display: block;
   }
 
-  .row{
-      margin:0;
-  }
+  .row{margin:0;}
 
   
 /* ######  TESTEMUNHOS  ########################################## */
