@@ -21,12 +21,21 @@ body > section {
     padding:6rem 2rem;
     background-color:white;
     position: relative;
-    box-shadow:0 .5rem 1rem rgba(0,0,0,.35)
+    box-shadow:0 .5rem 1rem rgba(0,0,0,.35);
 }
 
 /* exemplo de utilizacao da variavel */
 h1{
     color:var(--main-green);
+    font-size: 1.85rem;
+}
+
+h2{
+    font-size:1.2rem;
+}
+
+ul{
+    list-style-type: none;
 }
 
 .box-shadow{
@@ -39,7 +48,7 @@ h1{
 /* ######################################################################## * /
 /* ######  HOME   ############################################### */
 
-header{
+body > header{
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -144,9 +153,6 @@ nav > section a{
   /*----------POSICAO RELATIVA ANIMACAO----------*/
   position: relative;
 }
-/*nav a.active{
-    border-bottom:.25rem solid var(--main-green);
-}*/
 
 nav img{
     max-width:100%;
@@ -181,10 +187,14 @@ nav a.active:before{
 /* ############################################################ * /
 /* ######  CRONOLOGIA  ######################################### */
 
-#cronologia h1{
-   flex-basis:20%;
-   margin-right: 2rem;
-    font-size:2rem;
+#cronologia header{
+    flex-basis: 20%;
+    margin-right: 4rem;
+    font-size:1.5rem;
+}
+
+#cronologia header h1{
+    font-size:1.25em;
 }
 
 #cronologia > div {
@@ -197,7 +207,6 @@ nav a.active:before{
 
   #cronologia > div > button {
     background: white;
-    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
     display: flex;
     align-items: center;
     height: 65vh;
@@ -206,7 +215,6 @@ nav a.active:before{
     transition: flex-grow .25s;
     border:none !important;
     outline: none !important;
-    
   }
 
   #cronologia > div > button h3 {
@@ -225,7 +233,6 @@ nav a.active:before{
     flex-grow: 1;
     transition: flex-grow .75s;
     cursor:pointer;
-   /* background-color:#00c853;*/
     transition: background-color .1s;
     transition-timing-function:ease-in;
     font-size: 5vmin;
@@ -249,7 +256,6 @@ nav a.active:before{
   
   .modal-body > *{
     padding: 0 4rem 3rem 4rem;
-    
     width:50%;
   }
 
@@ -268,10 +274,8 @@ nav a.active:before{
     margin: auto;
   }
 
-
   .carousel-item.active{
       display:flex;
-
   }
   
   .modal-header{
@@ -309,14 +313,11 @@ nav a.active:before{
       transition: opacity 2s;
   }
 
-/* ########################################################################################### */
-/* ##############################  BOOTSTRAP RESETS  ######################################### */
-/* ########################################################################################### */
-
 /* unica forma que consegui de impedir o scroll qdo modal esta aberto */
 body.modal-open {
     position: fixed;
     top:0;bottom:0;left:0;right:0;
+    padding:0 !important;
 }
 
   .modal-content{
@@ -329,7 +330,7 @@ body.modal-open {
   .modal-dialog{
     min-height: 90vh !important;
     display: flex !important;
-    max-width: 1140px;
+    max-width: 90vw;
     pointer-events: all;
   }
  
@@ -358,6 +359,52 @@ body.modal-open {
 /* ######  CRONOLOGIA  ########################################## */
 /* ############################################################ */
 
+/* ############################################################ */
+/* ######  TESTEMUNHOS  ########################################## */
+
+
+#testemunhos h1 span{
+    position: sticky;
+    top: calc(18vmin + 4rem);
+  }
+
+  #testemunhos li {
+    height: 55vmin;
+    position: sticky;
+    top: calc(18vmin + 4.75rem);
+    background-color: white;
+    padding: 4rem 2vmin;
+    margin: 0 3rem 16vmin 3rem;
+    border:2px solid rgba(51,51,51,0.25)
+  }
+
+  #testemunhos li h2 {
+    color: green;
+  }
+
+  #testemunhos li:first-child{
+        top: calc(18vmin + 4rem);
+        border: none;
+  }
+
+  #testemunhos ul::after {
+    height: 15vmin;
+    content: "";
+    display: block;
+  }
+
+  .row{
+      margin:0;
+  }
+
+  
+/* ######  TESTEMUNHOS  ########################################## */
+/* ############################################################ */
+
+
+/* ############################################################ */
+/* ######  OUTRAS SECÇOES  #################################### */
+
 #apoios{
     margin-bottom: 3rem;
     background-color: #e1e1e1;
@@ -376,12 +423,16 @@ footer{
     z-index:-1;
 }
 
+/* ######  OUTRAS SECÇOES  #################################### */
+/* ############################################################ */
+
+
 /* ############################################################ * /
 /* ######  MEDIA QUERIES ####################################### */
 
 @media screen and (max-width:600px){
      
-    header{
+    body > header{
         flex-wrap:wrap;
     }
 
@@ -402,6 +453,15 @@ footer{
 
      #home figure{
          padding:4rem 1.5rem;
+     }
+
+     #testemunhos{
+         padding-left:.25rem;
+         padding-right:.25rem;
+     }
+     #testemunhos li{
+         margin-left: .2rem;
+         margin-right: .2rem;
      }
 }
 
@@ -431,6 +491,16 @@ footer{
       }
       #cronologia > div > button:hover {
         flex-grow: 4;
+      }
+
+      #testemunhos h1{
+          position: sticky;
+          top:4rem;
+      }
+
+      #testemunhos h1 span{
+            top: 0 !important;
+            position: relative;
       }
 }
 
