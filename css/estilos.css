@@ -14,6 +14,7 @@ body{
 
     /*---------------------PARA O SCROLL SPY--------------*/
     position: relative;
+
 }
 
 body > section {
@@ -22,6 +23,9 @@ body > section {
     background-color:white;
     position: relative;
     box-shadow:0 .5rem 1rem rgba(0,0,0,.35);
+    max-width: 100vw;
+    overflow-x:hidden;
+
 }
 
 /* exemplo de utilizacao da variavel */
@@ -38,8 +42,25 @@ ul{
     list-style-type: none;
 }
 
+a:link, a:visited {
+    color:inherit;
+    text-decoration: none;
+}
+
+a:hover{
+    color:var(--main-green);
+}
+
+body > section a{
+    border-bottom:4px solid var(--main-green);
+}
+
 .box-shadow{
     box-shadow:0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+ }
+
+ h1 .brevemente{
+     font-size:0.76em;
  }
 
 /* ######  estilos gerais   ############################################### */
@@ -59,7 +80,7 @@ body > header{
 }
 
 #home{
-    width: 90%;
+    width: 72%;
     padding: 1rem;
     padding-right: 0;
     position: relative;
@@ -138,7 +159,7 @@ nav > section{
   background-color:white;  
   display:flex;
   justify-content:space-around;
-  flex-wrap:Wrap;
+  flex-wrap:wrap;
 }
 
 nav > section a{
@@ -181,223 +202,107 @@ nav a.active:before{
     transform: scaleX(1);
 }
 
+
+.nav-link{
+    padding-top:1rem;
+    padding-bottom:.75rem;
+}
+
 /* ######  NAV   ############################################### */
 /* ############################################################ */
 
-/* ############################################################ * /
-/* ######  CRONOLOGIA  ######################################### */
+/* ######  PROGRAMA   ############################################### */
+/* ############################################################ */
 
-#cronologia header{
-    flex-basis: 20%;
-    margin-right: 4rem;
+#programa li{
+    display: flex;
+    align-items: center;
+    width:72vw;
+    margin:1.75rem 0;
+    padding:2rem .75rem;
+    box-shadow:0 19px 38px rgba(0, 0, 0, 0.05), 0 15px 12px rgba(0, 0, 0, 0.05);   
+
+}
+
+#programa .title{
+    font-size:1.1em;
+}
+
+.title + span{
+    font-size:.8em;
+}
+
+#programa .date {
+    margin-right:1.25rem;
+}
+
+#programa .date span:last-child{
+    display: block;
+    font-weight: bold;
+}
+
+#programa .content span{
+    display:block;
+}
+
+#programa ul{
+    padding:2rem 0;
+    width:90%;
+    margin: 0 5%;
+}
+
+
+#programa li{
+    margin: 1.15rem auto;
+    position: relative;
+}
+
+#programa i{
+    padding: 1rem 2rem;
+    align-self: flex-end;
+    position: absolute;
+    right: 0;
+    bottom: -.15rem;
+    color:var(--main-green);
+}
+
+/* ######  PROGRAMA  ######################################### */
+/* ############################################################ * /
+
+/* ############################################################ * /
+/* ######  ICONES  ############################################ */
+
+#marcos header{
     font-size:1.5rem;
 }
 
-#cronologia header h1{
+#marcos header h1{
     font-size:1.25em;
 }
 
-#cronologia > div {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 4rem;
-  }
-
-  #cronologia > div > button {
-    background: white;
-    display: flex;
-    align-items: center;
-    height: 65vh;
-    justify-content: center;
-    transition-timing-function: ease-in;
-    transition: flex-grow .25s;
-    border:none !important;
-    outline: none !important;
-  }
-
-  #cronologia > div > button h3 {
-    opacity: 0.5;
-    font-size: 1.45em;
-    padding: .25rem;    
-  }
-
-  
-  #cronologia div > button{
-    flex-grow:.2;
-    }
-
-
-  #cronologia > div > button:hover, #cronologia > div > button:active {
-    flex-grow: 1;
-    transition: flex-grow .75s;
-    cursor:pointer;
-    transition: background-color .1s;
-    transition-timing-function:ease-in;
-    font-size: 5vmin;
-
-  }
-
-
-  #cronologia div > button:hover h3, #cronologia div > button:active h3 {
-    opacity: .9;
-    transition-timing-function: ease-out;
-    transition: opacity .3s;
-    transition-delay: .22s;
-    color:#222;
-  } 
-
-  .nav-link{
-      padding-top:1rem;
-      padding-bottom:.75rem;
-  }
-
-  
-  .modal-body > *{
-    padding: 0 4rem 3rem 4rem;
-    width:50%;
-  }
-
-  .modal-body .icon3D{
-    display:flex;
-    padding: 0;
-  }
-
-  .icon3D:hover{
-      cursor: pointer;
-  }
-
-  .icon3D canvas{
-    width: 100% !important;
-    height:100% !important;
+#marcos > div {
+    padding: 1rem;
     margin: auto;
-  }
-
-  .carousel-item.active{
-      display:flex;
-  }
-  
-  .modal-header{
-    display: block;
-    width: 100%;
-    background-color: var(--main-green);  
-    color: white;
-    border-radius: 0 !important
-  }
-
-  .modal-header h5{
-      font-size:2rem;
-      text-align: center;
-  }
-
-  h5.modal-title{
-    font-size:8vmin;
-    line-height: 3;
-    font-weight: bold;
-    letter-spacing: .5rem;
-
-  }
-
-  .close{
-      font-size:5.5rem;
-      line-height: 0.5;
-      padding:2rem;
-      color:#e1e1e1;
-      opacity: .9;
-  }
-
-  .close:not(:disabled):not(.disabled):focus, .close:not(:disabled):not(.disabled):hover{
-      color:white;
-      opacity: 1;
-      transition: opacity 2s;
-  }
-
-/* unica forma que consegui de impedir o scroll qdo modal esta aberto */
-body.modal-open {
-    position: fixed;
-    top:0;bottom:0;left:0;right:0;
-    padding:0 !important;
+    justify-content: space-between;
+    align-items: center;
+align-content: center;
 }
 
-  .modal-content{
-    background-clip: 0;
-    border: none;
-    border-radius: 0;
-    outline: 0;
+  #marcos p{
+    margin-top: 1rem;
+    margin-bottom: 1rem;  
+    font-size: .6em;
   }
 
-  .modal-dialog{
-    min-height: 90vh !important;
-    display: flex !important;
-    max-width: 90vw;
-    pointer-events: all;
-  }
- 
-  .modal-body {
-    display: flex;
-    align-items: flex-start;
-    padding-top: 7%;
-  }
-    .carousel{
-      width:100%;
-    }
-
-    .carousel-inner, .carousel-item {
-      height:85vh;
-    }
-
-    .carousel-inner > a{
-      z-index: 999;
-      height: 4rem;
-      width: 25%;
-      background-color: #222;
-      opacity: .1;
-      top: calc(85vh - 4rem);
-    }
-
-/* ######  CRONOLOGIA  ########################################## */
-/* ############################################################ */
-
-/* ############################################################ */
-/* ######  TESTEMUNHOS  ########################################## */
-
-
-#testemunhos h1 span{
-    position: sticky;
-    top: calc(18vmin + 4rem);
+  #marcos figure{
+      min-width: 300px;
+      padding: 0 0 0 3rem;
   }
 
-  #testemunhos li {
-    height: 55vmin;
-    position: sticky;
-    top: calc(18vmin + 4.75rem);
-    background-color: white;
-    padding: 4rem 2vmin;
-    margin: 0 3rem 16vmin 3rem;
-    border:2px solid rgba(51,51,51,0.25)
+  #marcos figure img{
+    max-height: calc(100vh - 10rem);
+    width: 100%;
   }
-
-  #testemunhos li h2 {
-    color: green;
-  }
-
-  #testemunhos li:first-child{
-    top: calc(18vmin + 4rem);
-    border: none;
-  }
-
-  #testemunhos ul::after {
-    height: 15vmin;
-    content: "";
-    display: block;
-  }
-
-  .row{margin:0;}
-
-  
-/* ######  TESTEMUNHOS  ########################################## */
-/* ############################################################ */
 
 
 /* ############################################################ */
@@ -423,7 +328,6 @@ footer{
 
 /* ######  OUTRAS SECÇOES  #################################### */
 /* ############################################################ */
-
 
 /* ############################################################ * /
 /* ######  MEDIA QUERIES ####################################### */
@@ -452,15 +356,6 @@ footer{
      #home figure{
          padding:4rem 1.5rem;
      }
-
-     #testemunhos{
-         padding-left:.25rem;
-         padding-right:.25rem;
-     }
-     #testemunhos li{
-         margin-left: .2rem;
-         margin-right: .2rem;
-     }
 }
 
 @media screen and (max-width:768px){
@@ -479,27 +374,9 @@ footer{
         z-index:1001;
     }
 
-    #cronologia > div{
-        flex-direction: column;
-        padding: 1rem !important;
-      }
-      #cronologia > div > button {
-        height: auto;
-        width: 90%;
-      }
-      #cronologia > div > button:hover {
-        flex-grow: 4;
-      }
-
-      #testemunhos h1{
-          position: sticky;
-          top:4rem;
-      }
-
-      #testemunhos h1 span{
-            top: 0 !important;
-            position: relative;
-      }
+    #marcos figure{
+        padding-left: 0;
+    }
 }
 
    
