@@ -69,7 +69,7 @@
     </nav>-->
 
     <nav class="navbar navbar-expand-sm sticky-top shadow">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" href="#collapsibleNavbar">
+        <button class="navbar-toggler" type="button">
             <span class="navbar-toggler-icon">
                 <img src="img/burger-menu.png">
             </span>
@@ -208,11 +208,15 @@
     </section>
 
     <section id="equipa">
-        <h1>EQUIPA</h1>
+        <div class="container">
+            <h1>EQUIPA</h1>
+        </div>
     </section>
 
     <section id="apoios">
-        <h1>APOIOS</h1>
+        <div class="container">
+            <h1>APOIOS</h1>
+        </div>
     </section>
 
     <footer>
@@ -220,9 +224,25 @@
     </footer>
 
     <script>
-        $('.navbar-collapse ul li a').click(function () {
-            $('.navbar-toggler:visible').click();
+        var toggled = false;
+        $('.navbar-toggler').click(function () {
+            toggled = !toggled;
+            updateStatus();
         });
+
+         $('.navbar-collapse ul li a').click(function () {
+             toggled = false;
+             updateStatus();
+        });
+
+        function updateStatus(){
+            console.log("TOGGLE = " + toggled);
+            if (toggled == true){
+                document.body.setAttribute('class','toggled');
+            } else if (toggled == false){
+                document.body.removeAttribute('class','toggled');
+            }
+        }
     </script>
 
 </body>

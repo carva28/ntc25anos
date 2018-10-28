@@ -212,17 +212,29 @@ ul.navbar-nav{
     width: 100%;
     justify-content: space-around;
 }
+/*
+body.toggled{
+    height: 100vh;
+    overflow-y:hidden;
+}*/
 
-button[aria-expanded="true"] + section{
-    position: fixed;
-    top: 2.5rem;
-    left: 0;
-    right: 0;
-    border-bottom: 2px solid var(--main-green);
+.toggled .navbar-collapse{
+    display: inline-block;
+    width: 50%;
+    opacity: .9;
+    transition: opacity 12s;
 }
 
-.navbar-collapse {
-    max-height: 50vh;
+button:focus, button:active{
+    outline: none !important;
+}
+
+.navbar-toggler{
+    border-radius: 0;
+}
+
+.navbar-toggler-icon{
+    margin: .5em;
 }
 
 /* ######  NAV   ############################################### */
