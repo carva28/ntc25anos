@@ -32,7 +32,7 @@
 
 <!-- faz referencia à nav-->
 
-<body data-spy="scroll" data-target="#espiar" data-offset="50">
+<body data-spy="scroll" data-target="#collapsibleNavbar" data-offset="50">
 
     <header>
         <section id="home">
@@ -56,14 +56,37 @@
         </section>
     </header>
 
+
     <!-- NAVEGAÇAO -->
-    <nav class="sticky-top shadow">
-        <section id="espiar" class="">
-            <!--<a class="nav-link" href="#sobre">NTC</a>-->
-            <a class="nav-link" href="#programa">Programa</a>
-            <a class="nav-link" href="#marcos">25 ícones</a>
-            <!--<a class="nav-link" href="#testemunhos">Testemunhos</a>-->
-            <a class="nav-link" href="#equipa">Equipa 25 anos</a>
+    <!--<nav class="sticky-top shadow">
+        <section id="navbarSupportedContent">-->
+    <!--<a class="nav-link" href="#sobre">NTC</a>-->
+    <!--<a class="nav-link" href="#programa">Programa</a>
+            <a class="nav-link" href="#marcos">25 ícones</a>-->
+    <!--<a class="nav-link" href="#testemunhos">Testemunhos</a>-->
+    <!--<a class="nav-link" href="#equipa">Equipa 25 anos</a>
+        </section>
+    </nav>-->
+
+    <nav class="navbar navbar-expand-sm sticky-top shadow">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" href="#collapsibleNavbar">
+            <span class="navbar-toggler-icon">
+                <img src="img/burger-menu.png">
+            </span>
+        </button>
+
+        <section class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#programa">Programa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#marcos">Marcos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#equipa">Equipa</a>
+                </li>
+            </ul>
         </section>
     </nav>
 
@@ -76,7 +99,7 @@
             </h1>
 
             <p>A licenciatura em
-                <a href="#">Novas Tecnologias da Comunicação</a> da Universidade de Aveiro celebra 25 anos de existência em 2018/2019.
+                <a href="https://www.ua.pt/course/41" target="_blank">Novas Tecnologias da Comunicação</a> da Universidade de Aveiro celebra 25 anos de existência em 2018/2019.
             </p>
             <p>Para assinalar a data irão decorrer inúmeros eventos ao longo do ano letivo associados à comemoração:
                 <ul>
@@ -195,6 +218,12 @@
     <footer>
         @ Equipa dos 25 anos Novas Tecnologias da Comunicação
     </footer>
+
+    <script>
+        $('.navbar-collapse ul li a').click(function () {
+            $('.navbar-toggler:visible').click();
+        });
+    </script>
 
 </body>
 

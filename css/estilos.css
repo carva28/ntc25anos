@@ -208,6 +208,23 @@ nav a.active:before{
     padding-bottom:.75rem;
 }
 
+ul.navbar-nav{
+    width: 100%;
+    justify-content: space-around;
+}
+
+button[aria-expanded="true"] + section{
+    position: fixed;
+    top: 2.5rem;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid var(--main-green);
+}
+
+.navbar-collapse {
+    max-height: 50vh;
+}
+
 /* ######  NAV   ############################################### */
 /* ############################################################ */
 
@@ -366,13 +383,6 @@ footer{
         text-align:left;
     }
     
-    .navbar-toggler + *{
-        flex-direction: column;
-        justify-content: space-around;
-        height: calc(100vh - 1rem);
-        position:relative;
-        z-index:1001;
-    }
 
     #marcos figure{
         padding-left: 0;
