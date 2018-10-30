@@ -17,7 +17,7 @@ body{
 
 }
 
-body > section {
+body > div {
     min-height: 100vh;
     padding:6rem 2rem;
     background-color:white;
@@ -32,6 +32,7 @@ body > section {
 h1{
     color:var(--main-green);
     font-size: 1.85rem;
+    margin-bottom: 2rem;
 }
 
 h2{
@@ -51,7 +52,7 @@ a:hover{
     color:var(--main-green);
 }
 
-body > section a{
+body > div a{
     border-bottom:4px solid var(--main-green);
 }
 
@@ -61,7 +62,15 @@ body > section a{
 
  h1 .brevemente{
      font-size:0.76em;
+     font-weight: bold;
+     margin-bottom: 2rem;
+     display: block;
  }
+
+figure img{
+    max-width: 100%;
+    height: auto;
+}
 
 /* ######  estilos gerais   ############################################### */
 /* ######################################################################## * /
@@ -104,7 +113,7 @@ body > header{
     max-width: 100%;
 }
 
-#home figure figcaption{
+#home figure span{
     color:var(--main-green);
     font-size: 10vmin;
     position: absolute;
@@ -113,7 +122,7 @@ body > header{
     transform: translate(-50%,-10%);
 }
 
-figcaption a{
+#home figure  a{
     color:inherit;
 }
 
@@ -155,14 +164,14 @@ nav{
     padding:0 !important;
 }
 
-nav > section{
+nav > div{
   background-color:white;  
   display:flex;
   justify-content:space-around;
   flex-wrap:wrap;
 }
 
-nav > section a{
+nav > div a{
     padding:.75rem 0;
   padding-top:1rem;
   color:white;
@@ -309,7 +318,7 @@ button:focus, button:active{
     font-size:1.25em;
 }
 
-#marcos > div {
+#marcos > .container {
     padding: 1rem;
     margin: auto;
     justify-content: space-between;
@@ -318,9 +327,12 @@ align-content: center;
 }
 
   #marcos p{
-    margin-top: 1rem;
-    margin-bottom: 1rem;  
+    margin-bottom: 1.75rem;  
     font-size: .6em;
+  }
+
+  #marcos p:first-child{
+    margin-top: .25rem;
   }
 
   #marcos figure{
@@ -329,20 +341,66 @@ align-content: center;
   }
 
   #marcos figure img{
-    max-height: calc(100vh - 10rem);
-    width: 100%;
+    max-width: 100%;
   }
 
 
 /* ############################################################ */
 /* ######  OUTRAS SECÇOES  #################################### */
 
+#equipa figure{
+    margin: auto;
+    text-align: center;
+}
+
+#equipa figcaption, #equipa figcaption + p{
+    max-width: 90%;
+    margin-top:.5rem;
+    text-align: left;
+}
+
+#equipa figcaption span, #equipa figcaption + p span{
+    font-weight: bold;
+}
+
+
+
+
 #apoios{
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     background-color: #e1e1e1;
-    box-shadow:0 .5rem .75rem rgba(0,0,0,.1)
+    box-shadow:0 .5rem .75rem rgba(0,0,0,.05);
+    min-height: auto;
 
 }
+
+#apoios h1{
+    margin-bottom: 40px;
+}
+
+.card-group{
+    box-shadow:0 .5rem .75rem rgba(0,0,0,.1);
+}
+
+#apoios img {
+    width: 150px;
+    margin-left: 30%;
+    margin-top: 5px;
+}
+
+#apoios #img01_apoio{
+    width: 80px;
+    margin-left: 40%;
+}
+
+#apoios #img02_apoio{
+    margin-top: 20px;
+}
+
+#apoios #img03_apoio{
+    margin-top: 25px;
+}
+
 
 footer{
     position:fixed;
@@ -350,10 +408,11 @@ footer{
     width:100%;
     text-align: center;
     background-color: #e1e1e1cc;
-    padding: 1.5rem 1rem .75rem 1rem;
+    padding: 2.5rem 1rem 1.75rem 1rem;
     font-size:0.8rem;
     z-index:-1;
 }
+
 
 /* ######  OUTRAS SECÇOES  #################################### */
 /* ############################################################ */
@@ -385,6 +444,24 @@ footer{
      #home figure{
          padding:4rem 1.5rem;
      }
+
+     #marcos{
+        padding:6rem 0;
+
+    }
+
+    #equipa figure{
+margin-left:-15%;
+margin-right:-15%;
+    }
+
+    #equipa figcaption, #equipa figcaption + p{
+        padding-left:5%;
+    }
+
+    #equipa {
+        overflow:hidden;
+    }
 }
 
 @media screen and (max-width:768px){
@@ -395,10 +472,27 @@ footer{
         text-align:left;
     }
     
-
     #marcos figure{
         padding-left: 0;
     }
+
+    #marcos figure::before{
+        content: '';
+        height: 100%;
+        width:150vw;
+        z-index: 0;
+        background-color:rgba(151,151,151,0.15);
+        position: absolute;
+        left:-50vw;
+    }
+
+    #marcos figure img{
+        padding: 1rem;
+        z-index: 9;
+        position: relative;
+    }
+
+
 }
 
    

@@ -35,47 +35,35 @@
 <body data-spy="scroll" data-target="#collapsibleNavbar" data-offset="50">
 
     <header>
-        <section id="home">
+        <div id="home">
             <figure class="box-shadow">
-                <img src="img/logo_web_v2.png" alt='Logotipo de celebração dos 25 ANOS do curso de Novas Tecnologias da Comunicação'>
-                <figcaption>
-                    <a href="#programa">
+                <img src="img/logo_web_v2.png" alt='25 anos de Novas Tecnologias da Comunicação'>
+                <span>
+                    <a href="#programa" title="Avançar para a próxima secção">
                         <i class="fas fa-angle-down"></i>
                     </a>
-                </figcaption>
+                </span>
             </figure>
-        </section>
+        </div>
 
-        <section id="social-media">
-            <a href="https://www.facebook.com/25NTC/" target="_blank">
+        <aside id="social-media">
+            <a href="https://www.facebook.com/25NTC/" title="Visitar a página de Facebook numa nova janela" target="_blank">
                 <i class="fab fa-facebook"></i>
             </a>
-            <a href="https://www.instagram.com/25anosntc/" target="_blank">
+            <a href="https://www.instagram.com/25anosntc/" title="Visitar a página de Instagram numa nova janela" target="_blank">
                 <i class="fab fa-instagram"></i>
             </a>
-        </section>
+        </aside>
     </header>
-
-
-    <!-- NAVEGAÇAO -->
-    <!--<nav class="sticky-top shadow">
-        <section id="navbarSupportedContent">-->
-    <!--<a class="nav-link" href="#sobre">NTC</a>-->
-    <!--<a class="nav-link" href="#programa">Programa</a>
-            <a class="nav-link" href="#marcos">25 ícones</a>-->
-    <!--<a class="nav-link" href="#testemunhos">Testemunhos</a>-->
-    <!--<a class="nav-link" href="#equipa">Equipa 25 anos</a>
-        </section>
-    </nav>-->
 
     <nav class="navbar navbar-expand-sm sticky-top shadow">
         <button class="navbar-toggler" type="button">
             <span class="navbar-toggler-icon">
-                <img src="img/burger-menu.png">
+                <img src="img/burger-menu.png" alt="Show menu links">
             </span>
         </button>
 
-        <section class="collapse navbar-collapse" id="collapsibleNavbar">
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="#programa">Programa</a>
@@ -87,13 +75,13 @@
                     <a class="nav-link" href="#equipa">Equipa</a>
                 </li>
             </ul>
-        </section>
+        </div>
     </nav>
 
     <!-- Programa -->
-    <section id="programa">
+    <div id="programa">
 
-        <div class="container">
+        <section class="container">
             <h1>PROGRAMA
                 <span class="brevemente">[em atualização]</span>
             </h1>
@@ -182,12 +170,12 @@
                         </section>
                     </li>
                 </ul>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- 25 ANOS -->
-    <section id="marcos">
-        <div class="row container">
+    <div id="marcos">
+        <section class="row container">
             <header class="col-md-5">
                 <h1>O que representam os 25 anos de NTC?
                     <span class="brevemente">[em atualização]</span>
@@ -201,23 +189,59 @@
 
             <!-- render 3d-->
             <figure class="col-md-7">
-                <img src="img/postal-25.png">
+                <img src="img/postal-25.png" alt="25 ícones dispostos numa grelha de 5x5">
             </figure>
 
-        </div>
-    </section>
+        </section>
+    </div>
 
-    <section id="equipa">
-        <div class="container">
+    <div id="equipa">
+        <section class="container">
             <h1>EQUIPA</h1>
-        </div>
-    </section>
+            <figure>
+                <img src="https://goo.gl/US43HW">
+                <figcaption>
+                    <span>Da esquerda para a direita:</span> Tânia Ribeiro, Sofia Ribeiro, Diogo Carvalho, Hélia Gaspar, Diogo
+                    Silva, Silvino Martins, Carlos Eduardo Santos, Fernando Sousa, Joaquim Moreira, Carolina Nicolau, João
+                    Magalhães, Maria Cerqueira, Laura Ferreira, Margarida Pereira, Prof. José Nunes, Profª Ana Veloso
+                </figcaption>
+                <p>
+                    <span>
+                        Agradecimentos (por ordem alfabética):
+                    </span>
+                    António Veiga, Cátia Pereira, Cristina Silva, Daniel Pôças, Gabriel Loureiro, Hélder Caixinha, Nélson Zagalo, Luís Pedro,
+                    Ricardo Ferreira, Rui Raposo
+                </p>
+            </figure>
+        </section>
+    </div>
 
-    <section id="apoios">
-        <div class="container">
+    <div id="apoios">
+        <section class="container">
             <h1>APOIOS</h1>
-        </div>
-    </section>
+
+            <div class="card-group">
+                <div class="card">
+
+                    <div class="card-body">
+                        <img id="img01_apoio" class="card-img-top" src="img/apoios/science_park.svg" alt="Card image cap">
+                    </div>
+                </div>
+                <div class="card">
+
+                    <div class="card-body">
+                        <img id="img02_apoio" class="card-img-top" src="img/apoios/Ativo%202-100.jpg" alt="Card image cap">
+                    </div>
+                </div>
+                <div class="card">
+
+                    <div class="card-body">
+                        <img id="img03_apoio" class="card-img-top" src="img/apoios/Ativo%203-100.jpg" alt="Card image cap">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <footer>
         @ Equipa dos 25 anos Novas Tecnologias da Comunicação
@@ -230,17 +254,16 @@
             updateStatus();
         });
 
-         $('.navbar-collapse ul li a').click(function () {
-             toggled = false;
-             updateStatus();
+        $('.navbar-collapse ul li a').click(function () {
+            toggled = false;
+            updateStatus();
         });
 
-        function updateStatus(){
-            console.log("TOGGLE = " + toggled);
-            if (toggled == true){
-                document.body.setAttribute('class','toggled');
-            } else if (toggled == false){
-                document.body.removeAttribute('class','toggled');
+        function updateStatus() {
+            if (toggled == true) {
+                document.body.setAttribute('class', 'toggled');
+            } else if (toggled == false) {
+                document.body.removeAttribute('class', 'toggled');
             }
         }
     </script>
