@@ -72,9 +72,13 @@ body > div a:active{
      display: block;
  }
 
-figure img{
+figure img, figure video{
     max-width: 100%;
     height: auto;
+}
+
+.row{
+    margin:0;
 }
 
 /* ######  estilos gerais   ############################################### */
@@ -120,6 +124,8 @@ body > header{
 
 #home figure span{
     color:var(--main-green);
+    /* IE */
+    font-size: 10vm;
     font-size: 10vmin;
     position: absolute;
     bottom:0;
@@ -131,33 +137,38 @@ body > header{
     color:inherit;
 }
 
-#social-media{
-    font-size:4vmin;
-    align-self: start;
-    padding-top:calc(10vh - .5rem);
-    position: relative;
-    z-index: 1;
+nav#social-media{
+    /* IE */
+    font-size:5.25vm;
+    font-size:5.25vmin;
+    display: flex;
+    position: absolute;
+    top: 0;
+    /* IE */ 
+    right: 1vm;
+    right: 1vmin;
 }
 
-#social-media a{
-    display:block;
-    padding: 1rem;
+nav#social-media a{
+    /* IE */ 
+    padding: 2vm;
+    padding: 2vmin;
     color:green;
-    background-color:white;
-    margin-bottom:.75rem;
 }
 
-#social-media a:hover{
-    background-color:transparent;
+
+nav#social-media a:active i{
+    border-bottom:.25rem solid var(--main-green);
+    padding-bottom: .5rem;
 }
 
-#social-media a:hover i{
-    color:white;
+.animated.pulse{
+    animation-duration: 1250ms;
+    animation-timing-function: ease-out !important;
 }
 
-#social-media a:active{
-    box-shadow:0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);   
-}
+
+
 
 /* ######  HOME   ############################################### */
  /* ######################################################################## * /
@@ -251,6 +262,11 @@ button:focus, button:active{
     margin: .5em;
 }
 
+span.animated:hover i, span.animated:active i{
+    animation: pulse 600ms !important;
+    animation-timing-function: ease-in !important;
+}
+
 /* ######  NAV   ############################################### */
 /* ############################################################ */
 
@@ -264,16 +280,17 @@ button:focus, button:active{
 
 #programa li{
     display: flex;
-    align-items: flex-start;
     width:72vw;
     margin:1.75rem 0;
     padding:2rem .75rem;
     background-color: rgba(151,151,151,0.15);
 }
 
+
 #programa .title{
     font-size:1.1em;
     font-weight: bold;
+    margin-bottom:0.28rem;
 }
 
 .title + span{
@@ -298,25 +315,20 @@ button:focus, button:active{
     margin: 0 5%;
 }
 
-
 #programa li{
     margin: 1.15rem auto;
     position: relative;
 }
 
-#programa i{
-    padding: 1rem 2rem;
-    align-self: flex-end;
-    position: absolute;
-    right: 0;
-    bottom: -.15rem;
-    color:var(--main-green);
+#programa li.heading{
+    background-color:transparent;
+    margin:0;padding: 0;
 }
 
-#programa ul h3{
+#programa li.heading h3{
     color:rgba(151,151,151,0.75);
     margin-top: 3rem;
-
+    margin-left: -2rem;
 }
 
 /* ######  PROGRAMA  ######################################### */
@@ -325,15 +337,15 @@ button:focus, button:active{
 /* ############################################################ * /
 /* ######  ICONES  ############################################ */
 
-#marcos header{
+[id='25anos'] header{
     font-size:1.5rem;
 }
 
-#marcos header h1{
+[id='25anos'] header h1{
     font-size:1.25em;
 }
 
-#marcos > .container {
+[id='25anos'] > .container {
     padding: 1rem;
     margin: auto;
     justify-content: space-between;
@@ -341,27 +353,29 @@ button:focus, button:active{
 align-content: center;
 }
 
-  #marcos p{
+[id='25anos'] p{
     margin-bottom: 1.75rem;  
     font-size: .6em;
   }
 
-  #marcos p:first-child{
+  [id='25anos'] p:first-child{
     margin-top: .25rem;
   }
 
-  #marcos figure{
+  [id='25anos'] figure{
       min-width: 300px;
       padding: 0 0 0 3rem;
   }
 
-  #marcos figure img{
+  [id='25anos'] figure img{
     max-width: 100%;
   }
 
 
 /* ############################################################ */
 /* ######  OUTRAS SECÇOES  #################################### */
+
+#equipa{overflow: hidden;}
 
 #equipa figure{
     margin: auto;
@@ -379,41 +393,54 @@ align-content: center;
 }
 
 
-
+#apoios h1{
+    margin-bottom: 2.5rem;
+}
 
 #apoios{
-    margin-bottom: 5rem;
+    margin-bottom: 30vh;
     background-color: #e1e1e1;
     box-shadow:0 .5rem .75rem rgba(0,0,0,.05);
     min-height: auto;
-
 }
 
-#apoios h1{
-    margin-bottom: 40px;
+#apoios ul{
+    padding: 0;
 }
 
-.card-group{
-    box-shadow:0 .5rem .75rem rgba(0,0,0,.1);
+#apoios figure.row + h1{
+    margin-top:3rem;
 }
 
-#apoios img {
-    width: 150px;
-    margin-left: 30%;
-    margin-top: 5px;
+.apoio {
+    margin-bottom: 1.25rem;
+    padding: 0;
+    box-shadow:0 .5rem .75rem rgba(0,0,0,.05);
+    width:auto;
 }
 
-#apoios #img01_apoio{
-    width: 80px;
-    margin-left: 40%;
+.apoio a{
+    display: inline-block;
+    height: 100%;
+    background-color: white;
 }
 
-#apoios #img02_apoio{
-    margin-top: 20px;
+.apoios-group:hover a{
+    background-color: transparent;
+    transition: background-color 400ms;
 }
 
-#apoios #img03_apoio{
-    margin-top: 25px;
+.apoio:hover a, .apoio:active a{
+    background-color:white;
+}
+
+.apoio img{
+    max-width: 100%;
+    margin:auto;
+}
+
+.apoios-group .apoio{
+    margin-bottom: 0;
 }
 
 
@@ -421,13 +448,24 @@ footer{
     position:fixed;
     bottom:0;
     width:100%;
-    text-align: center;
     background-color: #e1e1e1cc;
     padding: 2.5rem 1rem 1.75rem 1rem;
     font-size:0.8rem;
     z-index:-1;
+    height:30vh;
+    display: flex;
+    align-items: center;
 }
 
+footer .row{
+    justify-content: flex-end !important;
+}
+
+footer h5{
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: .9rem;
+}
 
 /* ######  OUTRAS SECÇOES  #################################### */
 /* ############################################################ */
@@ -447,27 +485,17 @@ footer{
         padding-bottom:0;
     }
 
-    #social-media{
-        padding-top:0;
+    #home figure{
+        padding:4rem 1.5rem;
     }
 
-    #social-media a{
-        display:inline-block;
-        align-self: flex-end;
-    }
-
-     #home figure{
-         padding:4rem 1.5rem;
-     }
-
-     #marcos{
+    [id="25anos"]{
         padding:6rem 0;
-
     }
 
     #equipa figure{
-margin-left:-15%;
-margin-right:-15%;
+        margin-left:-17%;
+        margin-right:-17%;
     }
 
     #equipa figcaption, #equipa figcaption + p{
@@ -487,11 +515,11 @@ margin-right:-15%;
         text-align:left;
     }
     
-    #marcos figure{
+    [id="25anos"] figure{
         padding-left: 0;
     }
 
-    #marcos figure::before{
+    [id="25anos"] figure::before{
         content: '';
         height: 100%;
         width:150vw;
@@ -501,15 +529,32 @@ margin-right:-15%;
         left:-50vw;
     }
 
-    #marcos figure img{
+    [id="25anos"] figure img{
         padding: 1rem;
         z-index: 9;
         position: relative;
     }
 
+    [id="25anos"] figure{
+        padding: 0 !important;
+    }
 
+    #social-media {
+        /*IE*/
+        font-size:9vm !important;
+        font-size:9vmin !important;
+    }
+
+    footer .row{
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .apoio {
+        margin: auto;
+    }
 }
 
-   
 /* ######  MEDIA QUERIES ####################################### */
  /* ############################################################ * /

@@ -17,6 +17,8 @@
 
     <!--BOOTSTRAP CSS-->
     <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+    <!--ANIMATE CSS-->
+    <link rel="stylesheet" type="text/css" href="lib/css/animate.min.css">
 
     <!--ESTILOS GERAIS-->
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
@@ -25,6 +27,16 @@
     <script src="lib/js/jquery-3.3.1.min.js"></script>
     <!-- BOOTSTRAP JS -->
     <script src="lib/js/bootstrap.min.js"></script>
+    <!-- ENTER VIEW JS -->
+    <script src="js/enter-view.min.js"></script>
+
+    <noscript>
+        <style>
+            [class*="fa-angle"]:before {
+                content: "↓";
+            }
+        </style>
+    </noscript>
 
     <title>25 Anos de Novas Tecnologias da Comunicação</title>
 
@@ -37,23 +49,27 @@
     <header>
         <div id="home">
             <figure class="box-shadow">
+
+                <nav id="social-media">
+                    <a href="https://www.facebook.com/25NTC/" title="Visitar a página de Facebook numa nova janela" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/25anosntc/" title="Visitar a página de Instagram numa nova janela" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </nav>
+
                 <img src="img/logo_web_v2.png" alt='25 anos de Novas Tecnologias da Comunicação'>
-                <span>
+
+                <span class="animated">
                     <a href="#programa" title="Avançar para a próxima secção">
-                        <i class="fas fa-angle-down"></i>
+                        <i class="fas fa-angle-down animated"></i>
                     </a>
                 </span>
             </figure>
         </div>
 
-        <aside id="social-media">
-            <a href="https://www.facebook.com/25NTC/" title="Visitar a página de Facebook numa nova janela" target="_blank">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a href="https://www.instagram.com/25anosntc/" title="Visitar a página de Instagram numa nova janela" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-        </aside>
+
     </header>
 
     <nav class="navbar navbar-expand-sm sticky-top shadow">
@@ -69,7 +85,7 @@
                     <a class="nav-link" href="#programa">Programa</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#marcos">25 anos</a>
+                    <a class="nav-link" href="#25anos">25 anos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#equipa">Equipa</a>
@@ -89,104 +105,109 @@
             <p>A licenciatura em
                 <a href="https://www.ua.pt/course/41" target="_blank">Novas Tecnologias da Comunicação</a> da Universidade de Aveiro celebra 25 anos de existência em 2018/2019.
             </p>
-            <p>Para assinalar a data irão decorrer inúmeros eventos ao longo do ano letivo associados à comemoração:
-                <ul>
-                    <li>
-                        <section class="date">
-                            <span>11 a 13</span>
-                            <span>Outubro</span>
-                        </section>
-                        <section class="content">
-                            <span class="title">Mónica Aresta com a palestra “A vida é um hipertexto”</span>
-                            <span>Palestra promovida pela U.C. Laboratório Multimédia 5 com a participação de antigos alunos</span>
-                        </section>
-                    </li>
-                    <li>
-                        <section class="date">
-                            <span>11 a 13</span>
-                            <span>Outubro</span>
-                        </section>
-                        <section class="content">
-                            <span class="title">Participação no TechDays2018</span>
-                            <span>Exibição de cartaz de reflexão sobre os 25 anos de NTC</span>
-                        </section>
-                    </li>
-                    <li>
-                        <section class="date">
-                            <span>11 a 13</span>
-                            <span>Outubro</span>
-                        </section>
-                        <section class="content">
-                            <span class="title">Concurso "25 Anos NTC" no âmbito do TechDays2018</span>
-                            <span>Divulgação do curso e do seu aniversário através do sorteio de uma T-shirt comemorativa</span>
-                        </section>
-                    </li>
-                    <li>
-                        <section class="date">
-                            <span>11 a 13</span>
-                            <span>Outubro</span>
-                        </section>
-                        <section class="content">
-                            <span class="title">Participação no TechDays2018 com cartaz de reflexão sobre os 25 anos de NTC</span>
-                        </section>
-                    </li>
-                    <li>
-                        <section class="date">
-                            <span>11 a 13</span>
-                            <span>Outubro</span>
-                        </section>
-                        <section class="content">
-                            <span class="title">Participação no TechDays2018 com cartaz de reflexão sobre os 25 anos de NTC</span>
-                        </section>
-                    </li>
+            <p>Para assinalar a data irão decorrer inúmeros eventos ao longo do ano letivo associados à comemoração:</p>
+            <ul>
+                <li class="animated">
+                    <aside class="date">
+                        <span>11 a 13</span>
+                        <span>Outubro</span>
+                    </aside>
+                    <section class="content">
+                        <h3 class="title">Mónica Aresta com a palestra “A vida é um hipertexto”</h3>
+                        <span>Palestra promovida pela U.C. Laboratório Multimédia 5 com a participação de antigos alunos</span>
+                    </section>
+                </li>
+                <li class="animated">
+                    <aside class="date">
+                        <span>11 a 13</span>
+                        <span>Outubro</span>
+                    </aside>
+                    <section class="content">
+                        <h3 class="title">Mónica Aresta com a palestra “A vida é um hipertexto”</h3>
+                        <span>Exibição de cartaz de reflexão sobre os 25 anos de NTC</span>
+                    </section>
+                </li>
+                <li class="animated">
+                    <aside class="date">
+                        <span>11 a 13</span>
+                        <span>Outubro</span>
+                    </aside>
+                    <section class="content">
+                        <h3 class="title">Mónica Aresta com a palestra “A vida é um hipertexto”</h3>
+                        <span>Divulgação do curso e do seu aniversário através do sorteio de uma T-shirt comemorativa</span>
+                    </section>
+                </li>
+                <li class="animated">
+                    <aside class="date">
+                        <span>11 a 13</span>
+                        <span>Outubro</span>
+                    </aside>
+                    <section class="content">
+                        <h3 class="title">Mónica Aresta com a palestra “A vida é um hipertexto”</h3>
+                    </section>
+                </li>
+                <li class="animated">
+                    <aside class="date">
+                        <span>11 a 13</span>
+                        <span>Outubro</span>
+                    </aside>
+                    <section class="content">
+                        <h3 class="title">Mónica Aresta com a palestra “A vida é um hipertexto”</h3>
+                    </section>
+                </li>
+                <li class="heading">
                     <h3>Eventos passados</h3>
-                    <li>
-                        <section class="date">
-                            <span>11 a 13</span>
-                            <span>Outubro</span>
-                        </section>
-                        <section class="content">
-                            <span class="title">Participação no TechDays2018 com cartaz de reflexão sobre os 25 anos de NTC</span>
-                        </section>
-                    </li>
-                    <li>
-                        <section class="date">
-                            <span>11 a 13</span>
-                            <span>Outubro</span>
-                        </section>
-                        <section class="content">
-                            <span class="title">Participação no TechDays2018 com cartaz de reflexão sobre os 25 anos de NTC</span>
-                        </section>
-                    </li>
-                    <li>
-                        <section class="date">
-                            <span>11 a 13</span>
-                            <span>Outubro</span>
-                        </section>
-                        <section class="content">
-                            <span class="title">Participação no TechDays2018 com cartaz de reflexão sobre os 25 anos de NTC</span>
-                        </section>
-                    </li>
-                </ul>
+                </li>
+                <li class="animated">
+                    <aside class="date">
+                        <span>2</span>
+                        <span>Outubro</span>
+                    </aside>
+                    <section class="content">
+                        <h3 class="title">Mónica Aresta com a palestra “A vida é um hipertexto”</h3>
+                        <span>Palestra promovida pela U.C. Laboratório Multimédia 5 com a participação de antigos alunos</span>
+                    </section>
+                </li>
+                <li class="animated">
+                    <aside class="date">
+                        <span>16</span>
+                        <span>Outubro</span>
+                    </aside>
+                    <section class="content">
+                        <h3 class="title">João Bem com a palestra “O papel de um NTC no pequeno mundo das redes sociais”</h3>
+                        <span>Palestra promovida pela U.C. Laboratório Multimédia 5 com a participação de antigos alunos</span>
+                    </section>
+                </li>
+                <li class="animated">
+                    <aside class="date">
+                        <span>11 a 13</span>
+                        <span>Outubro</span>
+                    </aside>
+                    <section class="content">
+                        <h3 class="title">Mónica Aresta com a palestra “A vida é um hipertexto”</h3>
+                    </section>
+                </li>
+            </ul>
         </section>
     </div>
 
     <!-- 25 ANOS -->
-    <div id="marcos">
+    <div id="25anos">
         <section class="row container">
             <header class="col-md-5">
                 <h1>O que representam os 25 anos de NTC?
                     <span class="brevemente">[em atualização]</span>
                 </h1>
                 <span>Um ícone para cada ano</span>
-                <p>Para responder a um desafio proposto pela direção de curso, foi realizado um exercício conceptual de reflexão
-                    coletiva entre alunos e professores. O resultado é o desenho de 25 ícones correspondentes a 25 anos de
-                    NTC.
+                <p>
+                    Este ano celebra-se o 25º ano da história de NTC. Para assinalar a data, uma equipa composta por alunos e professores juntou-se
+                    e refletiu sobre a história do curso. O resultado é o desenho de 25 ícones correspondentes a 25 anos
+                    de NTC.
                 </p>
             </header>
 
             <!-- render 3d-->
-            <figure class="col-md-7">
+            <figure class="col-md-7 animated icones">
                 <img src="img/postal-25.png" alt="25 ícones dispostos numa grelha de 5x5">
             </figure>
 
@@ -197,18 +218,23 @@
         <section class="container">
             <h1>EQUIPA</h1>
             <figure>
-                <img src="https://goo.gl/US43HW">
+                <video class="animated foto-equipa" loop autoplay>
+                    <source src="img/team.mp4" type="video/mp4">
+                    <img src="img/team.jpg" alt="Fotografia de equipa com os 16 membros responsáveis pela celebração do aniversário, dispostos em 2 filas de forma descontraída">
+                </video>
+
                 <figcaption>
-                    <span>Da esquerda para a direita:</span> Profª Tânia Ribeiro, Sofia Ribeiro, Diogo Carvalho, Hélia Gaspar, Diogo
-                    Silva, Prof. Silvino Martins, Carlos Eduardo Santos, Fernando Sousa, Joaquim Moreira, Carolina Nicolau, João
-                    Magalhães, Maria Cerqueira, Laura Ferreira, Margarida Pereira, Prof. José Nunes, Profª Ana Veloso
+                    <span>Da esquerda para a direita:</span> Profª Tânia Ribeiro, Sofia Ribeiro, Diogo Carvalho, Hélia Gaspar,
+                    Diogo Silva, Prof. Silvino Martins, Carlos Eduardo Santos, Fernando Sousa, Joaquim Moreira, Carolina
+                    Nicolau, João Magalhães, Maria Cerqueira, Laura Ferreira, Margarida Pereira, Prof. José Nunes, Profª
+                    Ana Veloso
                 </figcaption>
                 <p>
                     <span>
                         Agradecimentos (por ordem alfabética):
                     </span>
-                    António Veiga, Profª Cátia Pereira, Cristina Silva, Daniel Pôças, Gabriel Loureiro, Prof. Hélder Caixinha, Prof. Nélson Zagalo, Prof. Luís Pedro,
-                    Ricardo Ferreira, Prof. Rui Raposo
+                    António Veiga, Profª Cátia Pereira, Cristina Silva, Daniel Pôças, Gabriel Loureiro, Prof. Hélder Caixinha, Prof. Nélson Zagalo,
+                    Prof. Luís Pedro, Ricardo Ferreira, Prof. Rui Raposo
                 </p>
             </figure>
         </section>
@@ -217,38 +243,80 @@
     <div id="apoios">
         <section class="container">
             <h1>UMA INICIATIVA DE</h1>
-
-
+            <figure class="row">
+                <span class="apoio col-md-4">
+                    <a href="https://www.ua.pt/deca/" title="Visitar página numa nova janela" target="_blank">
+                        <img src="img/apoios/apoios_deca.png" alt="Logo do Departamento de Comunicação e Arte, Universidade de Aveiro">
+                    </a>
+                </span>
+            </figure>
             <h1>APOIOS</h1>
 
-            <div class="card-group">
-                <div class="card">
+            <ul class="apoios-group row">
+                <li class="apoio col-md-4">
+                    <a href="http://www.creativesciencepark.com/" title="Visitar página numa nova janela" target="_blank">
+                        <img src="img/apoios/apoios_pci.png" alt="Logo do Creative Science Park - Aveiro Region">
+                    </a>
+                </li>
+                <li class="apoio col-md-4">
+                    <a href="http://www.ua.pt/sbidm/biblioteca/americancorner" title="Visitar página numa nova janela" target="_blank">
+                        <img src="img/apoios/apoios_ac.png" alt="Logo do American Corners Portugal">
+                    </a>
+                </li>
+                <li class="apoio col-md-4">
+                    <a href="http://solucoeselectronicas.com/" title="Visitar página numa nova janela" target="_blank">
+                        <img src="img/apoios/apoios_se.png" alt="Logo da Soluções Eletrónicas">
+                    </a>
+                </li>
+            </ul>
 
-                    <div class="card-body">
-                        <img id="img01_apoio" class="card-img-top" src="img/apoios/science_park.svg" alt="Card image cap">
-                    </div>
-                </div>
-                <div class="card">
-
-                    <div class="card-body">
-                        <img id="img02_apoio" class="card-img-top" src="img/apoios/Ativo%202-100.jpg" alt="Card image cap">
-                    </div>
-                </div>
-                <div class="card">
-
-                    <div class="card-body">
-                        <img id="img03_apoio" class="card-img-top" src="img/apoios/Ativo%203-100.jpg" alt="Card image cap">
-                    </div>
-                </div>
-            </div>
         </section>
     </div>
 
     <footer>
-        @ Equipa dos 25 anos Novas Tecnologias da Comunicação
+        <div class="container row">
+            <span class="col-md-4">
+                Copyright &copy; 2018 Universidade de Aveiro
+            </span>
+            <section class="col-md-5">
+                <h5>Contactos</h5>
+                Departamento de Comunicação e Arte (DeCA)
+                <br>3810-193, Aveiro, Portugal
+                <br>(+351) 234 370 200
+            </section>
+        </div>
     </footer>
-
     <script>
+
+        enterView({
+            selector: '.icones',
+            enter: function (el) {
+                el.classList.add('fadeInRight');
+            },
+            offset: -1.5, // enter at middle of viewport
+            once: true, // trigger just once
+        });
+
+        enterView({
+            selector: '.foto-equipa',
+            enter: function (el) {
+                el.classList.add('fadeInUp');
+            },
+            offset: -1, // enter at middle of viewport
+            once: true, // trigger just once
+        });
+
+        enterView({
+            selector: 'li',
+            enter: function (el) {
+                el.classList.add('fadeInUp');
+            },
+            offset: 0, // enter at middle of viewport
+            once: true, // trigger just once
+        });
+
+
+
         var toggled = false;
         $('.navbar-toggler').click(function () {
             toggled = !toggled;
