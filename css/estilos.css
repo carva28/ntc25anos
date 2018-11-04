@@ -299,9 +299,10 @@ span.animated:hover i, span.animated:active i{
 
 #programa .date {
     margin-right:1.25rem;
+    flex-basis: 9%;
 }
 
-#programa .date span:last-child{
+#programa .date span{
     display: block;
 }
 
