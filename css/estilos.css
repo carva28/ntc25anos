@@ -281,8 +281,7 @@ nav a.active:before{
   .modal-header{
     display: block;
     width: 100%;
-    background-color: var(--main-green);  
-    color: white;
+   // background-color: var(--main-green);  
     border-radius: 0 !important
   }
 
@@ -292,19 +291,34 @@ nav a.active:before{
   }
 
   h5.modal-title{
-    font-size:8vmin;
-    line-height: 3;
+    font-size:4vmin;
+    line-height: 2;
     font-weight: bold;
     letter-spacing: .5rem;
 
   }
 
+  .links h5{
+      margin:0 2rem;
+      display: inline-block;
+      font-size:4vmin !important;
+      color:var(--main-green) !important;
+  }
+
   .close{
       font-size:5.5rem;
       line-height: 0.5;
-      padding:2rem;
-      color:#e1e1e1;
       opacity: .9;
+  }
+
+
+  .modal-header .close{
+    padding: 1.25rem 1rem;
+
+    margin: 0;
+    
+    background-color: var(--main-green);
+          color:#e1e1e1;
   }
 
   .close:not(:disabled):not(.disabled):focus, .close:not(:disabled):not(.disabled):hover{
@@ -320,6 +334,11 @@ body.modal-open {
     padding:0 !important;
 }
 
+    .modal{
+        overflow-y: hidden !important;
+        background-color:rgba(251,251,251,0.9);
+    }
+
   .modal-content{
     background-clip: 0;
     border: none;
@@ -328,19 +347,23 @@ body.modal-open {
   }
 
   .modal-dialog{
-    min-height: 90vh !important;
     display: flex !important;
-    max-width: 90vw;
+    min-height: 99vh !important;
+    min-width: 98% !important;
+    max-width:100vw;
     pointer-events: all;
+    margin:auto;
   }
  
   .modal-body {
     display: flex;
     align-items: flex-start;
     padding-top: 7%;
+    box-shadow:0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
   }
     .carousel{
       width:100%;
+      margin:auto;
     }
 
     .carousel-inner, .carousel-item {

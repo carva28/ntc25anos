@@ -3,7 +3,7 @@ if (WEBGL.isWebGLAvailable() === false) {
     document.body.appendChild(WEBGL.getWebGLErrorMessage());
 }
 
-for (var i = 1993; i <= 2007; i++) {
+for (var i = 1993; i <= 2017; i++) {
     init(i);
 }
 
@@ -21,18 +21,27 @@ function init(year) {
     container = document.getElementById("ano" + year);
 
     /* set camera settings */
-    camera = new THREE.PerspectiveCamera(0.25, window.innerWidth / window.innerHeight, 0.25, 250);
-    camera.position.set(0, 150, 50);
-
-   
+    camera = new THREE.PerspectiveCamera(1, window.innerWidth / window.innerHeight, 0.25, 250);
+    camera.position.set(0, 50, 0);
  
-
-    /* set illumination */
+    /* set illumination
     light = new THREE.HemisphereLight(0xbbbbff, 0x444422);
     light.position.set(0, 150,500);
     scene.add(light);
+    */  
+    var hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, .75);
+    hemiLight.color.setHSL(0.7, .5, 0.6);
+    hemiLight.groundColor.setHSL(0.095, 1, 0.75);
+    hemiLight.position.set(0,150,150);
+    scene.add(hemiLight);
+    console.log("hemisphere light");
 
-
+    var dirLight = new THREE.DirectionalLight(0xffffff, 1.25);
+    dirLight.color.setHSL(0.5, 1, 0.95);
+    dirLight.position.set(0,50,50);
+    dirLight.position.multiplyScalar(1.75);
+    scene.add(dirLight);
+    console.log("directional light");
 
     /* load model */
     var loader = new THREE.GLTFLoader();
@@ -64,13 +73,11 @@ function init(year) {
 
     /* set controls */
     controls = new THREE.OrbitControls(camera, renderer.domElement);
-    controls.target.set(0, 0, 0);
-    controls.enableRotate = true;
     controls.minPolarAngle = Math.PI * 0.5;
     controls.maxPolarAngle = Math.PI * 0.5;
     controls.enableZoom = false;
     controls.enableKeys = false;
-    controls.noPan = true;
+    controls.enablePan = false;
     controls.update();
 
 
