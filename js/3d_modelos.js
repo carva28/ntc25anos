@@ -3,9 +3,56 @@ if (WEBGL.isWebGLAvailable() === false) {
     document.body.appendChild(WEBGL.getWebGLErrorMessage());
 }
 
-for (var i = 1993; i <= 2007; i++) {
-    init(i);
-}
+document.getElementById("btn01").addEventListener("click", function(event) {
+    // display the current click count inside the clicked div
+    for (var i = 1993; i <= 1997; i++) {
+        init(i);
+        console.log("Ano"+i);
+    }
+    
+  }, false);
+
+  document.getElementById("btn02").addEventListener("click", function(event) {
+    // display the current click count inside the clicked div
+    for (var i = 1998; i <= 2002; i++) {
+        init(i);
+        console.log("Ano"+i);
+    }
+    
+  }, false);
+
+  document.getElementById("btn03").addEventListener("click", function(event) {
+    // display the current click count inside the clicked div
+    for (var i = 2003; i <= 2007; i++) {
+        init(i);
+        console.log("Ano"+i);
+    }
+    
+  }, false);
+
+  document.getElementById("btn04").addEventListener("click", function(event) {
+    // display the current click count inside the clicked div
+    for (var i = 2008; i <= 2012; i++) {
+        init(i);
+        console.log("Ano"+i);
+    }
+    
+  }, false);
+
+  document.getElementById("btn05").addEventListener("click", function(event) {
+    // display the current click count inside the clicked div
+    for (var i = 2013; i <= 2017; i++) {
+        init(i);
+        console.log("Ano"+i);
+    }
+    
+  }, false);
+
+ 
+
+
+
+
 
 function init(year) {
 
@@ -20,6 +67,7 @@ function init(year) {
     /* get container reference */
     container = document.getElementById("ano" + year);
 
+
     /* set camera settings */
     camera = new THREE.PerspectiveCamera(0.25, window.innerWidth / window.innerHeight, 0.25, 250);
     camera.position.set(0, 150, 50);
@@ -32,7 +80,7 @@ function init(year) {
     light.position.set(0, 150,500);
     scene.add(light);
 
-
+    
 
     /* load model */
     var loader = new THREE.GLTFLoader();
@@ -47,8 +95,18 @@ function init(year) {
 
         mesh = gltf.scene;
         scene.add(mesh);
-
+        
         render();
+
+        document.getElementById("close05").addEventListener("click", function(event) {
+            // display the current click count inside the clicked div
+           
+                scene.remove(mesh);
+                console.log("remove");
+           
+            
+          }, false);
+        
 
     }, undefined, function (e) {
         console.error(e);
